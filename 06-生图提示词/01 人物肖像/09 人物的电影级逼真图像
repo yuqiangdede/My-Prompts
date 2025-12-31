@@ -1,0 +1,48 @@
+{
+  "objective": "Generate a cinematic, photo-realistic image of the person in the uploaded image",
+  "scene_description": {
+    "setting": {
+      "location": "Rain-soaked flyover bench at dusk",
+      "environment_details": [
+        "wet pavement with puddle reflections",
+        "mist in the air",
+        "vibrant neon cityscape in the background",
+        "bokeh trails from passing cars"
+      ]
+    },
+    "subject": {
+      "type": "person in the uploaded image",
+      "pose": "sitting on the bench, low-angle perspective",
+      "appearance": {
+        "outfit": {
+          "jacket": "colorblock denim jacket",
+          "inner_wear": "yellow hoodie",
+          "pants": "khaki cargo pants",
+          "footwear": "high-top sneakers"
+        }
+      }
+    }
+  },
+  "camera_and_style": {
+    "camera_angle": "cinematic low-angle shot",
+    "focus": {
+      "subject_focus": "sharp 8K clarity on subject",
+      "foreground": "intentionally blurred"
+    },
+    "color_grading": "moody mix of warm streetlights and cool neon tones",
+    "lighting": [
+      "ambient neon glow",
+      "warm streetlights",
+      "reflections in puddles"
+    ],
+    "aesthetics": [
+      "cinematic depth",
+      "high contrast",
+      "atmospheric realism"
+    ]
+  },
+  "output_preferences": {
+    "resolution": "8K highly detailed",
+    "style": "cinematic realism"
+  }
+}

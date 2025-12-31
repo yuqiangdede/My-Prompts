@@ -1,0 +1,33 @@
+{
+  "prompt": "A full-body artistic portrait of the woman from the reference image, keeping the exact same face. She is elegantly seated on the floor wearing a modern black top, soft loose gray jeans, and chunky gray-and-white sneakers. Her long, waist-length wavy milky-brown hair flows naturally, with half of it beautifully braided. She is laughing while looking upwards, capturing a confident candid smile. The background is an artistic monochrome (black and white) composition featuring a soft, blurred close-up side profile of the same face, creating a stylish dual-layer aesthetic. High-quality soft lighting, realistic textures, cinematic realism, and an artistic portrait vibe.",
+
+  "style": {
+    "lighting": "soft, high-quality, realistic",
+    "color_palette": "monochrome background, natural skin tones",
+    "mood": "confident, candid, artistic",
+    "quality": "ultra detailed, high-resolution"
+  },
+
+  "camera": {
+    "shot": "full-body portrait",
+    "angle": "slightly low angle, upward gaze feel",
+    "focus": "sharp on subject, blurred artistic background"
+  },
+
+  "character": {
+    "face": "same as reference image",
+    "expression": "laughing, confident smile",
+    "hair": "long wavy milky-brown, half braided",
+    "outfit": {
+      "top": "modern black top",
+      "bottom": "soft loose gray jeans",
+      "shoes": "chunky gray-and-white sneakers"
+    }
+  },
+
+  "background": {
+    "type": "artistic monochrome",
+    "layers": "soft blurred close-up side profile of same face",
+    "effect": "stylish dual-layer aesthetic"
+  }
+}
