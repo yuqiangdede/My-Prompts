@@ -1,33 +1,49 @@
-{
-  "prompt": "A full-body artistic portrait of the woman from the reference image, keeping the exact same face. She is elegantly seated on the floor wearing a modern black top, soft loose gray jeans, and chunky gray-and-white sneakers. Her long, waist-length wavy milky-brown hair flows naturally, with half of it beautifully braided. She is laughing while looking upwards, capturing a confident candid smile. The background is an artistic monochrome (black and white) composition featuring a soft, blurred close-up side profile of the same face, creating a stylish dual-layer aesthetic. High-quality soft lighting, realistic textures, cinematic realism, and an artistic portrait vibe.",
+# 双层侧脸背景肖像海报
 
-  "style": {
-    "lighting": "soft, high-quality, realistic",
-    "color_palette": "monochrome background, natural skin tones",
-    "mood": "confident, candid, artistic",
-    "quality": "ultra detailed, high-resolution"
-  },
+## 用途
 
-  "camera": {
-    "shot": "full-body portrait",
-    "angle": "slightly low angle, upward gaze feel",
-    "focus": "sharp on subject, blurred artistic background"
-  },
+基于成年人物参考图，生成“前景全身人物 + 背景同一张脸的大幅柔焦侧脸”的双层编辑海报。
 
-  "character": {
-    "face": "same as reference image",
-    "expression": "laughing, confident smile",
-    "hair": "long wavy milky-brown, half braided",
-    "outfit": {
-      "top": "modern black top",
-      "bottom": "soft loose gray jeans",
-      "shoes": "chunky gray-and-white sneakers"
-    }
-  },
+## 输入变量
 
-  "background": {
-    "type": "artistic monochrome",
-    "layers": "soft blurred close-up side profile of same face",
-    "effect": "stylish dual-layer aesthetic"
-  }
-}
+- `REFERENCE_IMAGE`：人物参考图，必填
+- `OUTFIT`：默认黑色上装、宽松灰色牛仔裤、灰白厚底运动鞋
+- `HAIR`：默认保留参考图，可指定编发
+- `EXPRESSION`：默认抬头自然大笑
+- `ASPECT_RATIO`：默认 4:5
+
+## 可复制 Prompt
+
+```text
+请根据上传参考图，生成一张双层构图的时尚人物海报。前景和背景必须是同一位成年人物。
+
+服装：{{OUTFIT|default:现代黑色上装、宽松灰色牛仔裤、灰白厚底运动鞋}}
+发型：{{HAIR|default:保留参考图的长度、发际线和主要轮廓，可加入局部自然编发}}
+表情：{{EXPRESSION|default:抬头自然大笑，轻松自信}}
+画幅：{{ASPECT_RATIO|default:4:5}}
+
+身份一致性：
+1. 前景人物与背景侧脸使用同一张脸，保留参考人物的脸型、五官比例、肤色、年龄和可识别特征。
+2. 背景侧脸不能变成另一位人物，也不能改变鼻型、下颌或发际线。
+3. 不改变身体比例、民族特征和性别表达。
+
+构图：
+- 前景：人物自然坐在地面，完整展示全身，身体形成舒展但真实的三角构图。
+- 前景人物清晰，服装和鞋子材质真实，手脚结构完整。
+- 背景：同一人物的大幅黑白或低饱和侧脸特写，占据画面上半部，柔和失焦、低对比、像双重曝光或大型印刷背景。
+- 背景侧脸只作为视觉层，不与前景身体错误融合，不出现多余眼睛、嘴部或重复轮廓。
+- 前景为自然肤色和克制灰黑色，背景为单色，形成明确层级。
+
+摄影与光线：
+- 柔和大面积主光，前景脸部和服装有细节，不出现硬阴影。
+- 50–85mm 人像摄影感，前景锐利，背景平滑柔焦。
+- 真实皮肤、布料、牛仔和鞋面纹理，避免塑料渲染。
+- 海报构图留有呼吸感，不生成文字、Logo 或水印。
+
+负向约束：
+前景背景不同脸、双重五官、背景脸过度清晰、身体与背景融合、额外肢体、错误手指、腿部变形、身份变化、过度磨皮、杂乱背景、文字、Logo、水印。
+```
+
+## 使用说明
+
+如果模型容易混淆双层人物，可先生成前景全身照，再单独生成侧脸背景并后期合成。
