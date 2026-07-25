@@ -1,1 +1,52 @@
-生成多3张同类型但不同风格姿势的杂志照封面：Using my picture in chic fashion portrait of a glamorous woman sitting indoors, holding and reading a fashion  magazine. She wears a patterned silk headscarf, black cat-eye sunglasses, sheer mesh gloves, and a simple black dress with thin straps. Her lips are painted in a bold dark red, and she accessories with a pearl necklace. The style is inspired by vintage Hollywood elegance, exuding sophistication and mystery. Bright minimal background with soft natural lighting.
+# 复古时尚杂志封面肖像
+
+## 用途
+
+基于成年女性参考图生成 3 张身份一致、姿态不同的复古时尚编辑照片，并预留杂志封面排版空间。
+
+## 输入变量
+
+- `REFERENCE_IMAGE`：人物参考图，必填
+- `WARDROBE`：默认黑色细肩带礼服
+- `ACCESSORIES`：默认丝质头巾、猫眼墨镜、珍珠项链、薄纱手套
+- `BACKGROUND`：默认明亮极简室内
+- `TEXT_MODE`：留白 / 用户提供文字，默认留白
+- `ASPECT_RATIO`：默认 4:5
+
+## 可复制 Prompt
+
+```text
+请根据上传参考图，生成 3 张同一位成年女性的复古时尚杂志封面式编辑肖像。
+
+服装：{{WARDROBE|default:简洁黑色细肩带礼服}}
+配饰：{{ACCESSORIES|default:带图案的丝质头巾、黑色猫眼墨镜、珍珠项链、薄纱手套}}
+背景：{{BACKGROUND|default:明亮、干净、极简的室内背景}}
+文字模式：{{TEXT_MODE|default:留白}}
+画幅：{{ASPECT_RATIO|default:4:5}}
+
+身份一致性：
+1. 保留参考人物的脸型、五官比例、肤色、年龄、发际线和可识别特征。
+2. 不改变身份，不进行夸张瘦脸、放大眼睛或明星化重塑。
+3. 三张照片中的人物、服装、妆容和配饰保持一致。
+
+统一视觉方向：
+- 复古电影黄金年代的优雅气质，但不复制具体演员、摄影师或现有杂志封面。
+- 深红色唇妆，妆面精致但保留皮肤纹理。
+- 明亮柔和的自然窗光或大型柔光箱，阴影干净，背景简洁。
+- 85mm 人像镜头感，编辑摄影质感，服装与珍珠材质真实。
+- 为封面标题和副标题预留负空间，但默认不生成任何文字、品牌名称或 Logo。
+
+三张姿态：
+1. 坐姿阅读一本无文字、无品牌的时尚画册，目光落在页面上。
+2. 放下画册，身体轻微侧转，越过墨镜看向镜头。
+3. 一只手轻扶头巾或墨镜，目光看向画外，构图更具动势。
+
+当 TEXT_MODE=用户提供文字时，只使用用户明确提供的文字；无法稳定生成文字时保留排版空位，不输出乱码。
+
+负向约束：
+人物变脸、三张服装不一致、配饰漂移、错误手指、墨镜遮挡全部面部、过度磨皮、廉价影楼感、真实杂志 Logo、虚构品牌名、乱码文字、水印。
+```
+
+## 使用说明
+
+可靠的杂志文字排版应在 Figma、Photoshop 或 Canva 中后期完成，生图阶段优先生成干净底图和留白。
