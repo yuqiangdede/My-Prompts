@@ -20,14 +20,14 @@
 
 从对应 Skill 的 `SKILL.md` 开始，严格按照 `workflow` 执行，并将每一步的确认结果作为下一步输入。
 
-- [软件设计流水线](skills/software-design-pipeline/SKILL.md)：01–10 步，含需求风险、数据状态和 UI 一致性 Gate。
-- [分层镜头叙事](skills/layered-cinematic-stills/SKILL.md)：原始剧照 → A/B/C 起步图组 → 条件生成 D/E → 独立色彩控制卡。
-- [技术报告生成](skills/technical-report-generation/SKILL.md)：技术方案 → 视频/PPT 分镜 → 实现提示。
-- [风格参考研究](skills/style-reference-research/SKILL.md)：资料检索 → 风格参数 → 风格转换 Prompt。
+- [软件设计流水线](skills/软件设计流水线/SKILL.md)：01–10 步，含需求风险、数据状态和 UI 一致性 Gate。
+- [分层镜头叙事](skills/分层镜头叙事/SKILL.md)：原始剧照 → A/B/C 起步图组 → 条件生成 D/E → 独立色彩控制卡。
+- [技术报告生成](skills/技术报告生成/SKILL.md)：技术方案 → 视频/PPT 分镜 → 实现提示。
+- [风格参考研究](skills/风格参考研究/SKILL.md)：资料检索 → 风格参数 → 风格转换 Prompt。
 
 ### 使用 Agent
 
-从 [`agents/software-design-agent/AGENT.md`](agents/software-design-agent/AGENT.md) 开始，由 Agent 根据输入在产品化 Prompt、软件设计 Skill 和技术报告 Skill 之间路由。
+从 [`agents/软件设计Agent/AGENT.md`](agents/软件设计Agent/AGENT.md) 开始，由 Agent 根据输入在产品化 Prompt、软件设计 Skill 和技术报告 Skill 之间路由。
 
 ## 目录结构
 
@@ -59,7 +59,7 @@ docs/       # 迁移映射和维护文档
 
 Gate 未通过时必须回退，不能继续生成后续交付物。
 
-## layered-cinematic-stills
+## 分层镜头叙事
 
 该 Skill 以原始影视剧照为镜头母版，可接收配色条和人物参考图。调用“拆解”或“分析”也必须进入图片生成流程。
 

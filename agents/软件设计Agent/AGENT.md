@@ -6,9 +6,9 @@
 
 ## Composition
 
-- 产品入口：`prompts/product-definition/想法产品化.md`
-- 主流程：`skills/software-design-pipeline/SKILL.md`
-- 汇报交付：`skills/technical-report-generation/SKILL.md`
+- 产品入口：`prompts/产品定义/想法产品化.md`
+- 主流程：`skills/软件设计流水线/SKILL.md`
+- 汇报交付：`skills/技术报告生成/SKILL.md`
 
 ## Input
 
