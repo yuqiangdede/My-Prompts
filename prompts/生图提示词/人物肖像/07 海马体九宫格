@@ -1,68 +1,55 @@
-{
- "project_type": "Nine-grid Trendy Star Portrait Collage",
- "aspect_ratio": "3:4",
- "visual_style": {
-   "color_palette": "Black and white, Monochrome, High key, Bright grayscale, Clean whites, Light grays",
-   "background": "Studio background, seamless white paper, light gray concrete wall, minimalist bright space, no dark voids",
-   "lighting": [
-     "Soft frontal lighting",
-     "Butterfly lighting",
-     "Studio lighting",
-     "Flattering beauty dish light",
-     "No backlighting",
-     "No harsh shadows on face"
-   ],
-   "mood": "Trendy, Cool, Confident, Star quality, Fashion editorial, Energetic, Edgy"
- },
- "subject_description": {
-   "identity_consistency": "Consistent facial features across all 9 panels (based on input reference)",
-   "hair_and_grooming": [
-     "Varied trendy hairstyles",
-     "Cool messy undercut",
-     "Styled quiff",
-     "Textured crop",
-     "Slicked back modern",
-     "Designer stubble",
-     "Masculine scruff",
-     "Well-groomed beard"
-   ],
-   "styling": [
-     "Fashion forward",
-     "Streetwear vibe",
-     "Leather jacket collar",
-     "Designer hoodie",
-     "Minimalist layers",
-     "Statement accessories (e.g., single earring)"
-   ],
-   "expressions/poses": [
-     "Confident smirk",
-     "Looking off-camera coolly",
-     "Hand running through hair",
-     "Slight jaw clench",
-     "Direct confident gaze",
-     "Dynamic poses"
-   ]
- },
- "composition": {
-   "layout": "9-grid collage, Dynamic layout (not perfectly uniform), Mix of close-ups and medium shots",
-   "style": "Fashion magazine contact sheet, Editorial spread"
- },
- "technical_specs": {
-   "camera_emulation": "Medium format fashion camera",
-   "film_stock": "Kodak T-Max 400 (fine grain, sharp)",
-   "resolution": "8k, masterpiece, sharp focus"
- },
- "negative_prompt": [
-   "Dark background",
-   "Black void background",
-   "Backlit",
-   "Silhouette",
-   "Harsh shadows",
-   "Underexposed",
-   "Old fashioned",
-   "Dull",
-   "Uniform grid",
-   "Same hairstyle in all",
-   "Clean shaven (unless specified)"
- ]
-}
+# 男士时尚九宫格肖像
+
+## 用途
+
+基于成年男性参考图生成 3×3 时尚肖像拼贴，保持同一身份，同时展示不同表情、机位和有限度造型变化。
+
+## 输入变量
+
+- `REFERENCE_IMAGE`：人物参考图，必填
+- `WARDROBE_THEME`：街头时尚 / 极简商务 / 机能风，默认街头时尚
+- `HAIR_VARIATION`：低 / 中，默认低
+- `COLOR_MODE`：黑白 / 彩色，默认黑白
+- `ASPECT_RATIO`：默认 3:4
+
+## 可复制 Prompt
+
+```text
+请根据上传参考图，生成一张 3×3 九宫格男士时尚肖像拼贴。主体是同一位成年男性，9 个格子必须保持身份一致。
+
+服装主题：{{WARDROBE_THEME|default:现代街头时尚}}
+发型变化：{{HAIR_VARIATION|default:低}}
+色彩模式：{{COLOR_MODE|default:黑白}}
+整体画幅：{{ASPECT_RATIO|default:3:4}}
+
+身份锁定：
+1. 9 格保持同一脸型、五官比例、眼睛、鼻子、嘴部、肤色、年龄、发际线和胡须基础状态。
+2. 不能把发型变化变成不同人物。发型只允许在同一长度和发际线基础上做梳理变化。
+3. 服装可以在同一主题下变化，但色彩、材质和层次保持统一系列感。
+4. 不改变民族特征、体型和性别表达。
+
+统一视觉系统：
+- 明亮影棚或浅灰极简空间，不使用黑色虚空背景。
+- 柔和正面主光或蝴蝶光，脸部没有硬阴影，眼睛保留眼神光。
+- 中画幅时尚摄影质感，细腻颗粒，清晰但不过度锐化。
+- 九宫格边距统一，允许近景和中近景交替，但每格主体大小协调。
+- 不生成文字、编号、Logo 或水印。
+
+9 格内容：
+1. 正面自然表情，直视镜头。
+2. 轻微自信微笑，头部小幅侧转。
+3. 看向画外，展示 3/4 侧脸。
+4. 一只手整理头发，动作自然。
+5. 中央主图，最具代表性的正面时尚肖像。
+6. 轻微抬头，强调下颌线但不夸张。
+7. 整理衣领或外套，视线向下。
+8. 轻松笑容，具有抓拍感。
+9. 克制严肃表情，侧前方视角。
+
+负向约束：
+九张不同脸、年龄漂移、发际线改变、胡须随机消失、同一姿势重复、每格不同摄影风格、黑色虚空背景、严重背光、脸部硬阴影、错误手指、拼贴边界混乱、文字、Logo、水印。
+```
+
+## 使用说明
+
+模型身份一致性较弱时，分 9 次生成单图后再拼版，比一次生成完整九宫格更稳定。
