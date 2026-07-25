@@ -1,5 +1,57 @@
-masterpiece, best quality, photorealistic, ultra-high resolution, vibrant colors, professional MV studio photography, a 3x3 photo grid collage.
-A collection of 9 glamorous portraits of the same person: a stunningly beautiful K-pop idol in her early 20s. She has large, captivating double-lidded eyes, flawless porcelain skin, and long, dark, voluminous wavy hair. She is wearing an elegant, vibrant red strapless dress.
-Her makeup is immaculate, inspired by a K-pop music video: shimmering eyeshadow, sharp eyeliner, and glossy, gradient lips.
-Each grid cell captures a different charismatic expression and pose:1.  **Top-left:** Taking a selfie, holding a phone just out of frame, with a sweet, fan-service smile.2.  **Top-center:** A playful wink with one eye closed and a charming smile.3.  **Top-right:** A surprised expression with wide eyes and an open mouth in an "O" shape, looking adorable.4.  **Middle-left:** A cute pouting face with pursed lips, head tilted slightly, showing her "aegyo" (cuteness).5.  **Middle-center:** A joyful, radiant smile with eyes crinkled shut, exuding pure happiness.6.  **Middle-right:** A mischievous, scrunched-up face, wrinkling her nose playfully.7.  **Bottom-left:** Looking back over her shoulder, playfully sticking the tip of her tongue out.8.  **Bottom-center:** A big, happy, open-mouthed laugh, looking joyfully upwards like a candid moment.9.  **Bottom-right:** A shy, gentle smile while looking away to the side, creating a "first love" feeling.
-Flawless, bright, and dynamic studio lighting, mimicking a high-budget music video set. Uses a combination of softboxes for a clean base and a subtle key light to add dimension and a glamorous sheen to her skin and hair. Clean, seamless, solid light gray studio background to make the red dress pop. Captured with a high-end portrait lens (equivalent to an 85mm f/1.2), creating a beautiful, creamy bokeh that makes the subject stand out sharply. The palette is rich and saturated, with the vibrant red of the dress as the focal point. The overall mood is charismatic, polished, and full of star quality.
+# 女士流行时尚九宫格肖像
+
+## 用途
+
+基于成年女性参考图生成 3×3 流行音乐编辑感九宫格，保持同一身份、服装和灯光，用不同表情形成完整表情组。
+
+## 输入变量
+
+- `REFERENCE_IMAGE`：人物参考图，必填
+- `OUTFIT`：默认红色简洁礼服
+- `HAIR`：默认与参考图一致，可做轻微造型
+- `MAKEUP`：默认清透舞台妆
+- `BACKGROUND`：默认浅灰无缝影棚
+- `ASPECT_RATIO`：默认 3:4
+
+## 可复制 Prompt
+
+```text
+请根据上传参考图，生成一张 3×3 九宫格流行时尚肖像拼贴。主体是同一位成年女性，9 格保持完全一致的身份、服装、妆容和基础发型。
+
+服装：{{OUTFIT|default:鲜明但剪裁简洁的红色礼服}}
+发型：{{HAIR|default:保留参考图的长度、发际线和主要轮廓，只做轻微造型}}
+妆容：{{MAKEUP|default:清透底妆、克制亮片眼妆、清晰眼线和自然渐变唇妆}}
+背景：{{BACKGROUND|default:浅灰色无缝影棚背景}}
+整体画幅：{{ASPECT_RATIO|default:3:4}}
+
+身份锁定：
+1. 保留参考人物的脸型、五官比例、肤色、年龄、眼神、发际线和可识别特征。
+2. 9 格中不得改变人物身份、脸型、鼻型、眼睛大小、年龄或民族特征。
+3. 服装、耳饰和妆容保持一致，不随机增减配饰。
+4. 所有表情保持自然的人体肌肉逻辑，不夸张拉伸五官。
+
+统一摄影系统：
+- 高预算流行音乐编辑摄影感，但不复制具体明星、组合或 MV 画面。
+- 大型柔光箱提供干净基础光，轻微轮廓光增加头发和肩部层次。
+- 85mm 人像镜头感，肤色真实，红色服装不过曝、不溢色。
+- 九宫格边距统一，每格为近景或中近景，主体比例协调。
+- 不生成文字、编号、Logo、水印或舞台品牌元素。
+
+9 格表情与动作：
+1. 甜美自然微笑，直视镜头。
+2. 轻松眨一只眼，笑容自然。
+3. 轻微惊喜表情，嘴部不过度夸张。
+4. 轻微噘嘴并小幅歪头，保持自然。
+5. 中央主图，开朗笑容，眼睛自然弯起。
+6. 调皮皱鼻表情，幅度克制。
+7. 回头看向镜头，肩部形成动势。
+8. 自然大笑，视线略向上，像抓拍瞬间。
+9. 温和害羞的微笑，目光看向侧方。
+
+负向约束：
+九张不同脸、未成年化、过度幼态、五官拉伸、表情恐怖、服装变化、发型长度变化、红色溢出、塑料皮肤、错误手指、拼贴错位、文字、Logo、水印。
+```
+
+## 使用说明
+
+“可爱表情”不等于幼态化。主体明确为成年人，表情变化只作用于神态，不改变年龄和身体特征。
