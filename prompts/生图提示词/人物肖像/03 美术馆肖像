@@ -1,1 +1,45 @@
-High-contrast black & white photo in a modern art gallery. Candid "stolen shot" of a young woman standing still  among a blurred moving crowd. Slightly slanted angle, face partly turned (not fully side view/camera). 3/4 body shot  (mid-thigh up). Wearing a long dark coat, hands in pockets. Behind her: framed Banksy artworks arranged in a grid
+# 美术馆黑白纪实肖像
+
+## 用途
+
+基于成年人物参考图，生成现代美术馆中的高反差黑白纪实肖像，利用静止主体与移动人群形成视觉对比。
+
+## 输入变量
+
+- `REFERENCE_IMAGE`：人物参考图，必填
+- `OUTFIT`：默认深色长外套
+- `GALLERY_STYLE`：现代白盒子 / 工业空间 / 极简展厅
+- `ARTWORK_DIRECTION`：墙面作品方向，默认原创街头艺术版画
+- `ASPECT_RATIO`：默认 4:5
+
+## 可复制 Prompt
+
+```text
+请根据上传参考图，生成一张现代美术馆内的黑白纪实肖像。
+
+人物服装：{{OUTFIT|default:深色长外套，双手自然放入口袋}}
+展厅：{{GALLERY_STYLE|default:现代白盒子美术馆}}
+墙面作品：{{ARTWORK_DIRECTION|default:原创的讽刺性街头艺术版画，不复制任何具体作品}}
+画幅：{{ASPECT_RATIO|default:4:5}}
+
+身份一致性：
+- 主体为参考图中的同一位成年人物，保留脸型、五官比例、发型轮廓、年龄和个人特征。
+- 不改变身份，不做明星化或陌生化处理。
+
+画面设计：
+1. 人物静止站立，身体略微侧向镜头，脸部处于 3/4 角度，不是完整侧脸。
+2. 构图为大腿中部以上的 3/4 身肖像，人物略微偏离中心。
+3. 周围观众以慢门运动模糊经过，主体保持清晰，形成“静止与流动”的对比。
+4. 相机略微倾斜但不过度，保留真实抓拍感。
+5. 背景墙上的作品使用原创图形和无可读文字的艺术元素，不复制具体艺术家作品、签名或展览名称。
+6. 黑白影调具有明确层次：深黑外套、自然肤色灰阶、明亮展厅和克制高光。
+7. 颗粒细腻，类似高感光度纪实胶片，但不牺牲脸部细节。
+8. 移动人群不能遮挡主体面部，不能出现重复人物或幽灵肢体。
+
+负向约束：
+复制具体艺术作品、艺术家签名、乱码展签、人物变脸、完整侧脸、主体运动模糊、过度倾斜、重复路人、额外肢体、纯黑死部、塑料皮肤、文字、Logo、水印。
+```
+
+## 使用说明
+
+墙面艺术作品最好使用用户提供的授权图片；没有授权时使用原创、非特定艺术家的通用视觉语言。
