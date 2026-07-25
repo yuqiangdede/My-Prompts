@@ -24,12 +24,14 @@
 
 - [Codex 任务执行](skills/01-软件开发/Codex任务执行/SKILL.md)
 - [代码审查与修复](skills/01-软件开发/代码审查与修复/SKILL.md)
+- [Java 项目架构分析](skills/01-软件开发/Java项目架构分析/SKILL.md)
 - [软件设计流水线](skills/软件设计流水线/SKILL.md)
 
 #### 研究分析
 
 - [深度调研与事实核验](skills/02-研究分析/深度调研与事实核验/SKILL.md)
 - [论文阅读与复现](skills/02-研究分析/论文阅读与复现/SKILL.md)
+- [Python 视觉算法项目复现](skills/02-研究分析/Python视觉算法项目复现/SKILL.md)
 - [风格参考研究](skills/风格参考研究/SKILL.md)
 
 #### 内容与报告
