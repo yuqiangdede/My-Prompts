@@ -18,12 +18,36 @@
 
 ### 使用 Skill
 
-从对应 Skill 的 `SKILL.md` 开始，严格按照 `workflow` 执行，并将每一步的确认结果作为下一步输入。
+从 [`skills/README.md`](skills/README.md) 按类别选择工作流，或从 [`提示词工程技能库`](skills/提示词工程技能库/SKILL.md) 进行任务路由。
 
-- [软件设计流水线](skills/软件设计流水线/SKILL.md)：01–10 步，含需求风险、数据状态和 UI 一致性 Gate。
-- [分层镜头叙事](skills/分层镜头叙事/SKILL.md)：原始剧照 → A/B/C 起步图组 → 条件生成 D/E → 独立色彩控制卡。
-- [技术报告生成](skills/技术报告生成/SKILL.md)：技术方案 → 视频/PPT 分镜 → 实现提示。
-- [风格参考研究](skills/风格参考研究/SKILL.md)：资料检索 → 风格参数 → 风格转换 Prompt。
+#### 软件开发
+
+- [Codex 任务执行](skills/01-软件开发/Codex任务执行/SKILL.md)
+- [代码审查与修复](skills/01-软件开发/代码审查与修复/SKILL.md)
+- [软件设计流水线](skills/软件设计流水线/SKILL.md)
+
+#### 研究分析
+
+- [深度调研与事实核验](skills/02-研究分析/深度调研与事实核验/SKILL.md)
+- [论文阅读与复现](skills/02-研究分析/论文阅读与复现/SKILL.md)
+- [风格参考研究](skills/风格参考研究/SKILL.md)
+
+#### 内容与报告
+
+- [结构化长文写作](skills/03-内容创作/结构化长文写作/SKILL.md)
+- [技术报告生成](skills/技术报告生成/SKILL.md)
+
+#### 图像视频
+
+- [图像提示词设计](skills/04-图像视频/图像提示词设计/SKILL.md)
+- [视频分镜提示词](skills/04-图像视频/视频分镜提示词/SKILL.md)
+- [分层镜头叙事](skills/分层镜头叙事/SKILL.md)
+
+#### Agent、评测与安全
+
+- [Agent 工作流设计](skills/05-Agent与自动化/Agent工作流设计/SKILL.md)
+- [提示词优化与评测](skills/05-Agent与自动化/提示词优化与评测/SKILL.md)
+- [提示词注入防护](skills/06-安全与质量/提示词注入防护/SKILL.md)
 
 ### 使用 Agent
 
@@ -35,10 +59,27 @@
 prompts/    # 一次性单任务 Prompt
 skills/     # 带状态、顺序、质量检查或工具编排的工作流
 agents/     # 组合多个 Prompt / Skill 的角色入口
-docs/       # 迁移映射和维护文档
+docs/       # 来源、迁移映射和维护文档
 ```
 
-原有 `01-软件工程` 至 `07 技术报告生成` 历史目录已完成迁移并清理；后续内容统一维护在上述三类目录中。
+Skill 分类结构：
+
+```text
+skills/
+├── 01-软件开发/
+├── 02-研究分析/
+├── 03-内容创作/
+├── 04-图像视频/
+├── 05-Agent与自动化/
+├── 06-安全与质量/
+├── 软件设计流水线/
+├── 分层镜头叙事/
+├── 技术报告生成/
+├── 风格参考研究/
+└── 提示词工程技能库/
+```
+
+原有 `01-软件工程` 至 `07 技术报告生成` 历史目录已完成迁移并清理；后续内容统一维护在 `prompts/`、`skills/` 和 `agents/` 三类目录中。
 
 ## 软件设计流水线
 
@@ -69,17 +110,20 @@ Gate 未通过时必须回退，不能继续生成后续交付物。
 - C/D 顺序有歧义时先给最多两个方案并等待选择。
 - 禁止未成年角色、原演员身份复制、文字、水印和无叙事依据的新增元素。
 
-## 迁移与维护
+## 收录与维护
 
-- 所有迁移均采用复制，原文件不删除、不覆盖。
-- 原路径到新路径的完整映射见 [`docs/迁移映射.md`](docs/迁移映射.md)。
+- 新增内容先判断是单任务 Prompt、工作流 Skill 还是组合 Agent。
 - 新增 Skill 必须包含 `description`、`input`、`workflow`、`rules`、`output`、`examples`。
-- 新增内容先判断是单任务 Prompt、工作流 Skill 还是组合 Agent，再放入对应目录。
-- 修改新目录内容时同步检查其来源说明和 README 索引。
+- 外部 Prompt 或 Skill 只吸收方法和结构，不直接复制低质量万能模板。
+- 修改内容时同步检查来源说明和 README 索引。
+- 所有迁移均采用复制，原文件不删除、不覆盖。
+- 来源和改编原则见 [`docs/提示词Skill来源.md`](docs/提示词Skill来源.md)。
+- 原路径到新路径的完整映射见 [`docs/迁移映射.md`](docs/迁移映射.md)。
 
 ## 维护入口
 
 - [Prompt 索引](prompts/README.md)
 - [Skill 索引](skills/README.md)
 - [Agent 索引](agents/README.md)
+- [提示词 Skill 来源](docs/提示词Skill来源.md)
 - [迁移映射](docs/迁移映射.md)
