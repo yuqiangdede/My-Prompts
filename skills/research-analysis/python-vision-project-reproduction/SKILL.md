@@ -1,3 +1,8 @@
+---
+name: python-vision-project-reproduction
+description: 当用户明确需要在指定本地系统、GPU 或 CUDA 环境中跑通、验证、评测、微调或复现一个公开 Python 计算机视觉/多模态视觉仓库时使用。负责真实环境安装、官方 Demo、自有数据、性能和训练链路验证；不用于纯论文解读或广泛技术调研。
+---
+
 # Python 视觉算法项目复现
 
 ## description
