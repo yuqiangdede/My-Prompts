@@ -11,67 +11,65 @@ product-development-pipeline
 software-development
 java-project-architecture-analysis
 image-generation
+technical-communication
+panorama-generation
 ```
 
-禁止：
+禁止：中文目录、空格、下划线、中文标点、大小写混排，以及仅用于人工排序的 `01-`、`02-` 前缀。
 
-```text
-软件设计流水线
-需求 设计 实现
-01-软件开发
-Agent工作流设计
-安全、合规与风险评估
-```
-
-规则：
-
-- 只使用小写英文字母、数字和连字符 `-`。
-- 不使用空格、下划线、中文字符、中文标点或大小写混排。
-- 名称表达稳定职责，不表达临时版本或人员名称。
-- 数字只有在业务语义明确时使用，不用 `01-`、`02-` 维持人工排序。
+名称应表达稳定职责，不表达临时版本或人员名称。
 
 ## 2. Prompt / Skill / Agent 名称
 
 ### Prompt 分类目录
 
-使用领域名词：
+使用领域或输出类型：
 
 ```text
 product-definition/
+software-development/
+writing/
+technical-communication/
+video-generation/
 geospatial-intelligence/
 image-generation/
 ```
 
 ### Skill 目录
 
-使用能力或工作流名称：
+使用真实执行能力或工作流名称：
 
 ```text
 requirement-analysis/
 code-review-fix/
-technical-report-generation/
+python-vision-project-reproduction/
+panorama-generation/
 ```
+
+不要把只生成一段文本/Prompt 的能力命名成 Skill。
 
 ### Agent 目录
 
-以 `-agent` 结尾：
+Agent 可以使用 `-agent` 后缀，也可以使用明确的路由职责名称：
 
 ```text
 product-development-agent/
+workflow-router/
 ```
 
-### Pipeline / Router
+`workflow-router` 位于 `agents/`，不是 `skills/`。
 
-编排器名称应明确表达职责：
+### Pipeline
+
+明确表达编排职责：
 
 ```text
 product-development-pipeline/
-workflow-router/
 ```
 
 ## 3. 文件命名
 
-固定入口保持标准名称：
+固定入口使用：
 
 ```text
 README.md
@@ -79,15 +77,13 @@ SKILL.md
 AGENT.md
 ```
 
-历史 Prompt、规则、参考资料可以保留中文文件名，以避免无意义的大规模改名和 Git 历史噪声。
-
-新增机器频繁引用的文件优先使用英文 `kebab-case.md`；面向人工阅读、无需程序引用的说明文档可以使用中文文件名。
+历史 Prompt、规则和参考资料可以保留中文文件名；新增机器频繁引用的文件优先使用英文 `kebab-case.md`。
 
 ## 4. 中文展示名
 
-英文路径不意味着文档必须英文。
+英文路径不要求正文英文。
 
-推荐：
+例如：
 
 ```text
 目录：skills/product-development-pipeline/
@@ -96,53 +92,49 @@ SKILL name：product-development-pipeline
 正文：中文
 ```
 
-这样同时保证：
-
-- 路径稳定。
-- GitHub URL 简洁。
-- Codex / Agent 引用方便。
-- 中文使用者阅读自然。
-
 ## 5. 跨目录引用
 
-所有跨 Prompt / Skill / Agent 的引用必须使用当前英文路径，不引用历史别名。
+必须使用当前英文路径，不引用历史别名。
 
 例如：
 
 ```text
 skills/product-development-skills/requirement-analysis/SKILL.md
 skills/software-development/codex-task-execution/SKILL.md
+skills/panorama-generation/SKILL.md
+prompts/technical-communication/technical-to-ppt-storyboard.md
+agents/workflow-router/AGENT.md
 agents/product-development-agent/AGENT.md
 ```
 
-修改目录时必须同步检查：
+修改目录或分类时同步检查：
 
 1. 根 `README.md`。
-2. 对应分类 `README.md`。
-3. `skills/workflow-router/`。
-4. `agents/` 中的 Composition / Routing。
+2. `prompts/README.md` / `skills/README.md` / `agents/README.md`。
+3. `agents/workflow-router/AGENT.md`。
+4. 其他 Agent 的 Composition / Routing。
 5. `docs/迁移映射.md`。
-6. 其他 Skill 的相对链接。
+6. `docs/skill-description-guidelines.md`。
+7. 其他 Skill/Prompt 的相对链接。
 
 ## 6. 历史兼容
 
 历史路径只允许出现在：
 
-- `docs/迁移映射.md` 的 Source / 旧目录列。
-- 明确标记为 Legacy 的历史参考文档。
+- `docs/迁移映射.md` 的历史列。
+- 明确标记 Legacy 的参考文档。
 - Git 历史。
 
 历史路径不得继续作为当前执行入口。
 
 ## 7. 新增目录检查表
 
-新增目录前检查：
-
 - [ ] 是否为英文 `kebab-case`？
 - [ ] 是否没有空格、中文、下划线和中文标点？
 - [ ] 名称是否描述稳定职责？
 - [ ] 是否与现有目录语义重复？
-- [ ] 是否应该是 Prompt、Skill 还是 Agent？
+- [ ] 是否先判断应该是 Prompt、Skill 还是 Agent？
+- [ ] 如果是 Skill，是否确实存在真实执行/验证闭环？
 - [ ] 是否已更新对应索引？
-- [ ] 是否需要加入 `workflow-router`？
-- [ ] 是否存在跨目录引用需要同步更新？
+- [ ] 是否需要更新 `agents/workflow-router`？
+- [ ] 是否存在跨目录引用需要同步修改？

@@ -2,78 +2,73 @@
 
 > 最近核对：2026-08-23
 
-本仓库不以复制“万能 Prompt”为目标，而是把公开方法、常见模式和真实任务经验改编为可执行的 Prompt / Skill / Agent。新增内容需要具备明确目标、输入、流程、边界、验收和示例。
+本仓库不以复制“万能 Prompt”为目标，而是把公开方法、常见模式和真实任务经验改编为边界明确的 Prompt / Skill / Agent。
 
 ## 使用原则
 
 1. 优先参考官方文档、论文和维护活跃的开源项目。
-2. 只吸收方法、结构和工程模式，不复制受版权保护的完整提示词正文。
-3. 外部仓库的示例需要重新编写，并适配本仓库规范。
+2. 只吸收方法、结构和工程模式，不直接搬运完整模板。
+3. 外部示例需要重新编写，并适配本仓库规范。
 4. 涉及开源代码、数据或完整模板时，单独核对许可证。
-5. 流行度只能说明关注度，不能代替质量、安全和适用性评估。
-6. 模型和产品持续变化，使用前应重新核对官方文档。
-7. 所有目录统一使用英文 `kebab-case`，中文保留在文档标题和正文中。
+5. 模型和产品持续变化，使用前重新核对官方资料。
+6. 目录使用英文 `kebab-case`，中文保留在标题和正文中。
+7. “写了很多步骤”不自动等于 Skill；没有真实执行闭环时优先作为 Prompt。
 
-## 官方与标准来源
-
-| 来源 | 主要内容 | 本仓库吸收方向 |
-| --- | --- | --- |
-| [OpenAI：Prompt engineering best practices](https://help.openai.com/en/articles/10032626-prompt-gineering-best-practices-for-chatgpt) | 清晰具体、补充上下文、迭代优化 | 通用 Prompt 结构、任务边界和迭代流程 |
-| [OpenAI：API Prompt Engineering Best Practices](https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-gpt-4) | 指令顺序、分隔符、输出格式和示例 | 结构化 Prompt、Few-shot 和输出约束 |
-| [OpenAI：Prompt management in Playground](https://help.openai.com/en/articles/9824968-generate-prompts-function-definitions-and-structured-output-schemas-in-the-playground) | Prompt 版本、变量、评测和发布 | `prompt-optimization-evaluation` |
-| [OpenAI：Designing AI agents to resist prompt injection](https://openai.com/index/designing-agents-to-resist-prompt-injection/) | Agent 注入风险和系统级约束 | `prompt-injection-defense` |
-| [Anthropic：Building effective agents](https://www.anthropic.com/engineering/building-effective-agents) | Chaining、Routing、Parallelization、Orchestrator-Workers、Evaluator-Optimizer 和 Agent | `agent-workflow-design` |
-| [Anthropic：Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents) | 按需上下文、检索、工具和长任务上下文控制 | Agent 上下文和记忆设计 |
-| [Anthropic：Demystifying evals for AI agents](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents) | 任务集、grader、环境和多轮 Agent 评测 | `prompt-optimization-evaluation` |
-| [Google Gemini：Prompt design strategies](https://ai.google.dev/gemini-api/docs/prompting-strategies) | 清晰指令、结构、参数、长上下文和多模态提示 | 通用结构和图像视频提示词 |
-| [OWASP：LLM Prompt Injection Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html) | 直接/间接注入、数据泄露、最小权限、输入输出检查和红队测试 | `prompt-injection-defense` |
-| [NIST：Strengthening AI Agent Hijacking Evaluations](https://www.nist.gov/news-events/news/2025/01/technical-blog-strengthening-ai-agent-hijacking-evaluations) | 间接提示词注入和 Agent 劫持评测 | 安全测试集和风险评价 |
-
-## 开源社区来源
-
-| 项目 | 主要内容 | 使用方式 |
-| --- | --- | --- |
-| [dair-ai/Prompt-Engineering-Guide](https://github.com/dair-ai/Prompt-Engineering-Guide) | Prompt 技术、论文、应用与工具的综合指南 | 用于建立术语和模式索引，不直接复制模板 |
-| [promptslab/Awesome-Prompt-Engineering](https://github.com/promptslab/Awesome-Prompt-Engineering) | Prompt、Context Engineering、Agent、评测与安全资源目录 | 用于发现来源和补充分类 |
-| [ai-boost/awesome-prompts](https://github.com/ai-boost/awesome-prompts) | Prompt 模板与 Prompt 工程化工具 | 用于区分“复制模板”和“可测试 Prompt 工程” |
-| [Meirtz/Awesome-Context-Engineering](https://github.com/Meirtz/Awesome-Context-Engineering) | 上下文工程、记忆、检索和 Agent 资料 | 用于 Agent 上下文分类 |
-| [trigaten/Learn_Prompting](https://github.com/trigaten/Learn_Prompting) | Prompt 基础、安全和应用教程 | 用于发现教学案例，不照搬原文 |
-
-## 论文与模式来源
-
-| 资料 | 主要内容 | 本仓库吸收方向 |
-| --- | --- | --- |
-| [A Prompt Pattern Catalog to Enhance Prompt Engineering with ChatGPT](https://arxiv.org/abs/2302.11382) | 用模式语言记录可复用 Prompt 方案 | Skill 的问题、适用场景、结构和组合方式 |
-| [Understanding Prompt Management in GitHub Repositories](https://arxiv.org/abs/2509.12421) | 开源 Prompt 仓库的重复、格式和维护问题 | 分类、来源、索引、版本和质量规则 |
-| [Design Patterns for Securing LLM Agents against Prompt Injections](https://arxiv.org/abs/2506.08837) | Agent 注入防护设计模式 | 权限隔离、可信边界和系统级防护 |
-
-## 当前分类
+## 当前结构
 
 ```text
+prompts/
+├── product-definition/
+├── software-development/
+├── writing/
+├── technical-communication/
+├── video-generation/
+├── vision-multimodal-understanding/
+├── safety-compliance-risk/
+├── geospatial-intelligence/
+└── image-generation/
+
 skills/
 ├── product-development-skills/
 ├── product-development-pipeline/
 ├── software-development/
 ├── research-analysis/
-├── content-creation/
-├── image-video/
 ├── agent-automation/
 ├── safety-quality/
 ├── layered-shot-narrative/
-├── technical-report-generation/
-├── style-reference-research/
-└── workflow-router/
+├── panorama-generation/
+└── style-reference-research/
+
+agents/
+├── workflow-router/
+└── product-development-agent/
 ```
+
+## 分类原则
+
+### Prompt
+
+一次输入即可完成，最终主要输出仍是文本、Prompt、JSON、表格或一次性分析。
+
+例如：单张图片提示词、视频分镜、结构化长文、技术方案转 PPT/视频分镜、给另一个 Codex 写任务书、一次性图片分析。
+
+### Skill
+
+需要真实执行闭环，例如：读取仓库/文件/网络、修改代码、跨阶段状态、Gate、失败回退、运行测试/构建/验证、依赖脚本或真实中间产物。
+
+例如：当前 Codex 直接修改代码并验证、多来源调研、本地 Python/CUDA 项目复现、需求流水线、全景资产到 Three.js 查看器并验证。
+
+### Agent
+
+负责选择或组合 Prompt 与 Skill，例如 `workflow-router` 和 `product-development-agent`。Router 是裁判，不应作为业务 Skill 自动候选。
 
 ## 后续收集检查表
 
-新增外部 Prompt 或 Skill 前检查：
-
-- [ ] 是一次性 Prompt、固定 Skill 还是组合 Agent？
+- [ ] 它应该是 Prompt、Skill 还是 Agent？
+- [ ] 如果做 Skill，是否真的需要真实环境、工具、状态、Gate、测试或验证？
 - [ ] 是否有明确来源和许可证？
-- [ ] 是否存在重复内容？
-- [ ] 是否包含输入、工作流、规则、输出和示例？
+- [ ] 是否与现有内容重复？
+- [ ] 是否有清晰输入、边界、输出和失败处理？
 - [ ] 是否能通过真实任务验证？
-- [ ] 是否涉及工具权限、敏感数据或提示词注入风险？
 - [ ] 目录名是否符合英文 `kebab-case`？
-- [ ] 是否已加入对应 README 和 `workflow-router` 索引？
+- [ ] 是否已同步更新对应 README 和 Router？
