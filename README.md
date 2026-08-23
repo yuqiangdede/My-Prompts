@@ -112,6 +112,7 @@ Gate 未通过时必须回退，不能用默认假设强行推进。
 - `README.md`、`SKILL.md`、`AGENT.md` 的标题和正文可以继续使用中文。
 - 历史资料中的中文文件名可以保留；新增可执行入口优先使用稳定英文名称。
 - 修改目录后必须同步更新 README、Router、Agent、迁移映射和跨 Skill 链接。
+- 完整规则见 [`docs/naming-conventions.md`](docs/naming-conventions.md)。
 
 ## 收录与维护
 
@@ -128,5 +129,6 @@ Gate 未通过时必须回退，不能用默认假设强行推进。
 - [Skill 索引](skills/README.md)
 - [Agent 索引](agents/README.md)
 - [工作流路由器](skills/workflow-router/SKILL.md)
+- [目录命名规范](docs/naming-conventions.md)
 - [提示词 Skill 来源](docs/提示词Skill来源.md)
 - [迁移映射](docs/迁移映射.md)
