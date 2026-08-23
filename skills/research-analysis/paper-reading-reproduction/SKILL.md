@@ -1,3 +1,8 @@
+---
+name: paper-reading-reproduction
+description: 当任务以具体论文、项目页和官方代码仓库为中心，需要理解论文主张、核对代码实际实现、评估实验可信度并形成分阶段复现计划时使用。负责论文—代码—实验对照；广泛网络调研用 deep-research-fact-checking，直接跑通视觉仓库用 python-vision-project-reproduction。
+---
+
 # 论文阅读与复现
 
 ## description
