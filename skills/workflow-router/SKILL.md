@@ -1,3 +1,8 @@
+---
+name: workflow-router
+description: 当用户目标跨域、模糊或无法直接判断应使用哪个 Prompt、Skill 或 Agent，或用户明确询问“该用哪个工作流”时使用。只负责选择最小可行入口和必要组合；当用户已明确指定某个 Skill，或任务明显匹配单一 Skill 时不应触发。
+---
+
 # AI 工作流路由器
 
 ## description
