@@ -1,3 +1,8 @@
+---
+name: java-project-architecture-analysis
+description: 当用户需要在接手、改造或排障前先理解现有 Java/Spring/Maven/Gradle 系统的启动入口、模块依赖、调用链、数据/事务/异步和部署结构时使用。负责证据驱动的架构摸底与风险定位；不直接承担功能实现，也不替代通用代码审查。
+---
+
 # Java 项目架构分析
 
 ## description
