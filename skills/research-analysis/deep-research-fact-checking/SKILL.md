@@ -1,3 +1,8 @@
+---
+name: deep-research-fact-checking
+description: 当任务需要针对技术、产品、政策、市场或项目等公开信息开展多来源网络调研、来源分级、交叉核验并形成带置信度的结论时使用。负责广泛外部事实研究；以单篇论文为中心的复现用 paper-reading-reproduction，直接在本地跑视觉仓库用 python-vision-project-reproduction。
+---
+
 # 深度调研与事实核验
 
 ## description
