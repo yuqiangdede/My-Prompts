@@ -1,15 +1,15 @@
 ---
-name: software-design-pipeline
-description: 当用户希望把模糊的 B 端或行业系统需求从问题定义一路推进到可冻结的方案、模块、数据/状态、异常、PRD、页面规格，并最终选择 UI Prompt 或可运行原型时使用。该 Skill 是总控编排器，优先复用“需求 设计 实现”目录中的独立能力 Skill，并通过 Gate 控制推进。
+name: product-development-pipeline
+description: 当用户希望把模糊的 B 端或行业系统需求从问题定义一路推进到可冻结的方案、模块、数据/状态、异常、PRD、页面规格，并最终选择 UI Prompt 或可运行原型时使用。该 Skill 是总控编排器，优先复用 product-development-skills 中的独立能力，并通过 Gate 控制推进。
 ---
 
-# Software Design Pipeline
+# Product Development Pipeline
 
 ## 定位
 
 本 Skill 是 **Orchestrator / 总控**，不是另一个巨型需求 Prompt。
 
-- 单独处理某一阶段：直接调用 `../需求 设计 实现/` 中对应能力 Skill。
+- 单独处理某一阶段：直接调用 `../product-development-skills/` 中对应能力 Skill。
 - 从模糊需求完整推进：使用本流水线。
 - 内部 `steps/` 主要保存阶段契约和 Gate，不重复维护能力 Skill 的全部方法论。
 
@@ -56,6 +56,20 @@ description: 当用户希望把模糊的 B 端或行业系统需求从问题定�
 - Step 08 禁止重新执行需求澄清、需求分析、模块设计和流程设计。
 - Gate ③ 未通过，禁止进入 UI/原型输出。
 - 最后一步不默认生图：由用户目标决定输出到 UI Prompt、Greenfield 原型、Existing Project 原型或文档。
+- 所有目录引用必须使用英文 `kebab-case` 稳定路径。
+
+## References
+
+历史专项材料保存在 `references/`：
+
+- `requirement-analysis/`
+- `interaction-rendering/`
+- `feature-implementation/`
+- `data-dashboard/`
+- `performance-optimization/`
+- `monolithic-version/`
+
+这些材料只作为按需参考，不改变主流程 Gate 顺序。
 
 ## 中间产物契约
 

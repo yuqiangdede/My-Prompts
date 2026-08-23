@@ -1,8 +1,8 @@
-# 需求 / 设计 / 实现能力 Skill 集
+# 产品研发能力库
 
-本目录是**可独立调用的能力库**，不是固定顺序的流水线。
+本目录是**可独立调用的能力 Skill 集**，不是固定顺序的流水线。
 
-复杂 B 端/行业系统需要从模糊需求完整推进时，使用同级的 `软件设计流水线` 作为总控；仅处理某一个阶段时，直接使用本目录对应 Skill。
+复杂 B 端 / 行业系统需要从模糊需求完整推进时，使用同级 `../product-development-pipeline/` 作为总控；仅处理某一个阶段时，直接使用本目录对应 Skill。
 
 ## 能力清单
 
@@ -22,21 +22,37 @@
 
 常规产品链路：
 
-`澄清 → 分析 → 方案设计 → PRD → 独立评审 → 原型`
+```text
+requirement-clarification
+→ requirement-analysis
+→ solution-design
+→ prd-writing
+→ requirement-review
+→ prototype-*
+```
 
 复杂行业系统：
 
-`软件设计流水线（总控） → 按需复用本目录能力 → Gate → 输出路由`
+```text
+product-development-pipeline
+→ 按需复用本目录能力
+→ Gate
+→ 输出路由
+```
 
 版本结束：
 
-`版本复盘 → 项目知识沉淀`
+```text
+version-retrospective
+→ project-knowledge-capture
+```
 
 ## 设计约束
 
 - 每个 Skill 只承担一种稳定职责，避免触发冲突。
 - 前一步信息不足时可以回退，但不得偷偷把假设写成事实。
-- PRD 负责“写”，Requirement Review 负责“审”。
+- PRD 负责“写”，`requirement-review` 负责“审”。
 - `solution-design` 是需求分析与 PRD 之间的明确桥梁，禁止在 PRD 中临时发明核心方案。
 - 原型分成 Greenfield 与 Existing Project 两条路径，禁止混用。
 - 通用模板、存储协议和长案例优先放到各 Skill 的 `references/`，不要持续膨胀 `SKILL.md`。
+- 目录名统一使用英文 `kebab-case`，中文名称只用于标题和说明文字。
