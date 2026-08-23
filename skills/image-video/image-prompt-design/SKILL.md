@@ -1,3 +1,8 @@
+---
+name: image-prompt-design
+description: 当用户需要为新的单张或独立图像任务设计、重构或迭代生图提示词，并控制主体、构图、光线、色彩、材质、风格和约束时使用。负责图像提示词设计；若已有影视剧照或场景参考并要求生成连续分层镜头图组，应使用 layered-shot-narrative。
+---
+
 # 图像提示词设计
 
 ## description
