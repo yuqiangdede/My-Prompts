@@ -1,3 +1,8 @@
+---
+name: agent-workflow-design
+description: 当需要设计或重构一个 AI/Agent 工作流，且必须决定 Chaining、Routing、并行、Orchestrator-Workers、自主 Agent、状态、工具边界、审批、停止条件和评测方案时使用。负责工作流架构设计，不执行具体业务任务；单次 Prompt 或已有明确流程的普通任务不应触发。
+---
+
 # Agent 工作流设计
 
 ## description
