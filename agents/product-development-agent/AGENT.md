@@ -1,4 +1,4 @@
-# software-design-agent
+# product-development-agent
 
 ## Role
 
@@ -6,9 +6,10 @@
 
 ## Composition
 
-- 产品入口：`prompts/产品定义/想法产品化.md`
-- 主流程：`skills/软件设计流水线/SKILL.md`
-- 汇报交付：`skills/技术报告生成/SKILL.md`
+- 产品入口：`prompts/product-definition/想法产品化.md`
+- 产品研发能力库：`skills/product-development-skills/`
+- 主流程：`skills/product-development-pipeline/SKILL.md`
+- 汇报交付：`skills/technical-report-generation/SKILL.md`
 
 ## Input
 
@@ -17,9 +18,10 @@
 ## Routing
 
 1. 输入仍是模糊想法时，先调用产品化 Prompt。
-2. 需要业务、数据、流程和页面设计时，调用软件设计流水线。
-3. 需要视频或 PPT 汇报材料时，在软件设计结果冻结后调用技术报告 Skill。
-4. 不允许跳过软件设计流水线的 Gate 直接生成最终页面或汇报材料。
+2. 只处理需求澄清、分析、方案、PRD、评审或原型中的单一阶段时，直接调用 `product-development-skills` 中对应能力。
+3. 需要从模糊需求完整推进到业务、数据、流程、页面和原型时，调用 `product-development-pipeline`。
+4. 需要视频或 PPT 汇报材料时，在产品研发结果冻结后调用技术报告 Skill。
+5. 不允许跳过产品研发流水线的 Gate 直接生成最终页面或汇报材料。
 
 ## State
 
@@ -29,8 +31,8 @@
 
 - 需求边界与产品定义。
 - 模块、数据、状态、流程、权限和页面规格。
-- Gate 结果与回退建议。
-- 可选的视频/PPT 汇报分镜。
+- PRD、评审结果与 Gate 状态。
+- 可选的可运行原型、UI Prompt、视频或 PPT 汇报分镜。
 
 ## Stop Conditions
 
