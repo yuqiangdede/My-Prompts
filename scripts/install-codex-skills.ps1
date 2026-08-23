@@ -38,19 +38,35 @@ foreach ($dir in $SkillDirs) {
 if ($List) {
     Write-Host "Available skills:" -ForegroundColor Cyan
     $SkillMap.Keys | Sort-Object | ForEach-Object {
-        $relative = [System.IO.Path]::GetRelativePath($RepoRoot, $SkillMap[$_])
+        $fullPath = $SkillMap[$_]
+        if ($fullPath.StartsWith($RepoRoot, [System.StringComparison]::OrdinalIgnoreCase)) {
+            $relative = $fullPath.Substring($RepoRoot.Length).TrimStart([char[]]"\/")
+        }
+        else {
+            $relative = $fullPath
+        }
         Write-Host ("  {0,-40} {1}" -f $_, $relative)
     }
     exit 0
 }
 
-if (-not $All -and $Include.Count -eq 0) {
+$NormalizedInclude = @(
+    $Include |
+        ForEach-Object { $_ -split "," } |
+        ForEach-Object { $_.Trim() } |
+        Where-Object { -not [string]::IsNullOrWhiteSpace($_) }
+)
+
+if (-not $All -and $NormalizedInclude.Count -eq 0) {
     Write-Host "No skills selected." -ForegroundColor Yellow
     Write-Host "Use -List to view skills, -Include <name1,name2> to install selected skills, or -All to install all skills."
     exit 1
 }
 
 if ($Scope -eq "Global") {
+    if ([string]::IsNullOrWhiteSpace($env:USERPROFILE)) {
+        throw "USERPROFILE is not available; cannot resolve the global Codex skills directory."
+    }
     $DestinationRoot = Join-Path $env:USERPROFILE ".codex\skills"
 }
 else {
@@ -65,10 +81,10 @@ else {
 New-Item -ItemType Directory -Path $DestinationRoot -Force | Out-Null
 
 if ($All) {
-    $SelectedNames = $SkillMap.Keys | Sort-Object
+    $SelectedNames = @($SkillMap.Keys | Sort-Object)
 }
 else {
-    $SelectedNames = $Include | ForEach-Object { $_.Trim() } | Where-Object { $_ } | Sort-Object -Unique
+    $SelectedNames = @($NormalizedInclude | Sort-Object -Unique)
 }
 
 $Installed = @()
