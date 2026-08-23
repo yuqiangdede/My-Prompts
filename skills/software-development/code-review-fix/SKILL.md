@@ -1,3 +1,8 @@
+---
+name: code-review-fix
+description: 当主要目标是审查已有代码、PR、提交或 diff，主动发现真实缺陷、安全、兼容性、并发、性能和可维护性风险，并在允许时直接修复和验证时使用。负责“先审再修”；普通明确功能实现应使用 codex-task-execution，不用于纯架构摸底。
+---
+
 # 代码审查与修复
 
 ## description
