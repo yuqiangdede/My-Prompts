@@ -1,6 +1,6 @@
 ---
-name: layered-cinematic-stills
-description: 将原始影视剧照、配色条和可选人物参考图拆解并直接生成连续的分层镜头叙事图组与独立色彩控制卡。用户只要调用本 skill（包括仅说“拆解”），就必须交付 A/B/C 起步的图片结果，并稳定锁定构图、人物替换、色彩与跨帧连续性。
+name: layered-shot-narrative
+description: 当用户提供原始影视剧照或明确的场景参考图，并要求基于同一空间、人物和镜头连续生成 A/B/C（必要时 D/E）分层叙事图片和色彩控制卡时使用。该 Skill 直接生成连续图组并锁定跨帧一致性；普通单张图片提示词设计应使用 image-prompt-design。
 ---
 
 ## Skill Contract
