@@ -79,7 +79,7 @@ foreach ($file in $Files) {
         $Warnings.Add("$relative : description may be too short ($($description.Length) chars)")
     }
 
-    if ($description -notmatch '不用于|不负责|应使用|直接使用|不应触发|不直接') {
+    if ($description -notmatch '不用于|不负责|应使用|直接使用|不应触发|不直接|不做|不开发|不把|禁止|不属于') {
         $Warnings.Add("$relative : description has no explicit negative/adjacent-skill boundary")
     }
 }
