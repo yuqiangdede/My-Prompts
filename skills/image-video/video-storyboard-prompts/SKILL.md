@@ -1,3 +1,8 @@
+---
+name: video-storyboard-prompts
+description: 当用户需要把故事、脚本、产品演示或业务流程拆成多个按时间连续的视频镜头，并为每个镜头设计动作、时长、机位、镜头运动和生成提示词时使用。负责通用视频分镜；若输入是已完成的技术方案并目标是 PPT/技术汇报视频，应使用 technical-report-generation。
+---
+
 # 视频分镜提示词
 
 ## description

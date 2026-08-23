@@ -5,12 +5,14 @@ Skill 是带有固定执行顺序、中间状态、质量检查或工具编排�
 ## 阅读顺序
 
 - 每个 Skill 根目录应提供 `README.md`，说明用途、示例输入、执行过程和预期结果。
-- `SKILL.md` 是正式执行规范，包含 `description`、`input`、`workflow`、`rules`、`output` 和 `examples`。
+- `SKILL.md` 是正式执行规范；文件首部必须提供 YAML frontmatter 的 `name` 与 `description`，正文包含 `input`、`workflow`、`rules`、`output` 和 `examples`。
+- Codex 自动发现主要依赖 frontmatter 的 `name + description`；正文中的 `## description` 可继续作为人类阅读说明。
 - 第一次使用某个 Skill 时，先读 README，再按 `SKILL.md` 执行。
 
 ## 统一入口
 
 - **工作流路由器**：[用途与例子](workflow-router/README.md) · [SKILL.md](workflow-router/SKILL.md)
+- **Skill Description 规范**：[文档](../docs/skill-description-guidelines.md)
 - **提示词 Skill 来源与改编说明**：[文档](../docs/提示词Skill来源.md)
 
 ## 产品研发
@@ -66,7 +68,8 @@ Skill 是带有固定执行顺序、中间状态、质量检查或工具编排�
 1. 一次性输入输出放入 `prompts/`，不要包装成 Skill。
 2. 只有存在多步骤、状态、Gate、工具或质量检查时才放入 `skills/`。
 3. 每个正式 Skill 根目录应同时包含 `README.md` 和 `SKILL.md`。
-4. README 必须至少说明用途、一个具体输入例子、执行过程和预期结果。
-5. 新增内容必须注明来源或改编依据。
-6. 不直接复制低质量“万能 Prompt”。
-7. 新增后必须同步更新本索引。
+4. 每个 `SKILL.md` 必须以 YAML frontmatter 开头；`name` 必须与目录名一致，`description` 必须写清触发条件、核心职责和最容易混淆的非目标/相邻 Skill。
+5. README 必须至少说明用途、一个具体输入例子、执行过程和预期结果。
+6. 新增内容必须注明来源或改编依据。
+7. 不直接复制低质量“万能 Prompt”。
+8. 新增后必须同步更新本索引，并可运行 `scripts/audit-skill-metadata.ps1` 检查元数据。

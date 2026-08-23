@@ -1,3 +1,8 @@
+---
+name: prompt-optimization-evaluation
+description: 当已有 Prompt、Skill 或系统提示词需要基于代表性测试集、评分标准、基线、失败归因和回归测试做可验证优化时使用。负责评测与迭代，不负责从零设计业务流程，也不用于仅做文字润色。
+---
+
 # 提示词优化与评测
 
 ## description

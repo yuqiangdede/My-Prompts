@@ -1,6 +1,6 @@
 ---
 name: product-development-pipeline
-description: 当用户希望把模糊的 B 端或行业系统需求从问题定义一路推进到可冻结的方案、模块、数据/状态、异常、PRD、页面规格，并最终选择 UI Prompt 或可运行原型时使用。该 Skill 是总控编排器，优先复用 product-development-skills 中的独立能力，并通过 Gate 控制推进。
+description: 当用户希望把一个 B 端或行业系统需求端到端推进多个产品设计阶段，并需要通过 Gate 管理澄清、分析、方案、PRD、评审、页面规格和原型输出之间的顺序与回退时使用。该 Skill 只做总控编排；若用户只要求单独一个阶段，直接使用 product-development-skills 中对应专项 Skill。
 ---
 
 # Product Development Pipeline

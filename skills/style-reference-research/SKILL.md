@@ -1,3 +1,8 @@
+---
+name: style-reference-research
+description: 当用户给出作者、作品、参考图或明确视觉风格主题，需要检索可靠来源、提取可观察风格特征，并转成可复用的色彩、构图、光线、材质、LUT 或生图约束时使用。负责“先研究风格再转译”；无外部风格研究需求的普通生图提示词用 image-prompt-design。
+---
+
 # style-reference-research
 
 ## description

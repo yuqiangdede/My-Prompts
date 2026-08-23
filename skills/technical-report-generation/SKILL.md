@@ -1,3 +1,8 @@
+---
+name: technical-report-generation
+description: 当已有技术方案、架构说明或技术文档，需要编排成面向汇报的视频分镜脚本或 PPT 页级分镜，并生成实现工具提示时使用。负责技术内容的汇报叙事与可视化编排；不负责设计底层技术方案，也不用于普通长文或通用故事视频分镜。
+---
+
 # technical-report-generation
 
 ## description

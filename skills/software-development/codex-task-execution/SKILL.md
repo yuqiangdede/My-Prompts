@@ -1,3 +1,8 @@
+---
+name: codex-task-execution
+description: 当用户已经有明确的软件开发、修改或修复目标，需要把任务组织成可直接交给 Codex 在现有仓库中读取、修改、测试并汇报的完整执行指令时使用。负责“让编码 Agent 完成这次改动”；若主要目标是主动审查现有代码用 code-review-fix，若主要目标是先理解 Java 架构用 java-project-architecture-analysis。
+---
+
 # Codex 任务执行
 
 ## description
