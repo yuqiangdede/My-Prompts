@@ -1,31 +1,46 @@
-# 提示词工程技能库使用说明
+# AI 工作流路由器使用说明
 
 ## 这个 Skill 能做什么
 
-作为整个仓库的任务路由入口，先判断用户需要的是一次性 Prompt、固定多步骤 Skill，还是需要工具和状态管理的 Agent，再推荐具体目录和执行模式。
+作为整个仓库的统一入口，先判断用户需要的是一次性 Prompt、固定多步骤 Skill，还是需要工具和状态管理的 Agent，再推荐最小可行的具体目录和组合顺序。
 
-适合用户只有一个模糊目标，不确定应该调用哪条 Prompt 或 Skill 的情况。
+适合用户只有一个目标，但不确定应该调用哪条 Prompt、Skill 或 Agent 的情况。
 
-## 具体例子 1：修改现有 Java 项目
+## 具体例子 1：从需求做到原型
 
 ### 输入
 
 ```text
-帮我分析一个 Spring Boot 事件系统，并让 Codex增加事件驳回功能。
+设计一个统一运维平台，从需求澄清开始，一直做到可以演示的原型。
+```
+
+### 路由结果
+
+```text
+类型：Skill
+使用：skills/product-development-pipeline/
+```
+
+因为任务跨越需求、方案、状态、PRD、评审和原型多个阶段，需要 Gate 控制。
+
+## 具体例子 2：修改现有 Java 项目
+
+### 输入
+
+```text
+帮我分析一个 Spring Boot 事件系统，并让 Codex 增加事件驳回功能。
 ```
 
 ### 路由结果
 
 ```text
 类型：Skill 组合
-先使用：Java 项目架构分析
-再使用：Codex 任务执行
-需要时追加：代码审查与修复
+先使用：java-project-architecture-analysis
+再使用：codex-task-execution
+需要时追加：code-review-fix
 ```
 
-原因是任务同时包含理解现有架构和实际修改代码，单条 Prompt 不足以完成。
-
-## 具体例子 2：给一张监控图打标签
+## 具体例子 3：给一张监控图打标签
 
 ### 输入
 
@@ -37,12 +52,12 @@
 
 ```text
 类型：Prompt
-使用：prompts/视觉与多模态理解/图片标签.md
+使用：prompts/vision-multimodal-understanding/图片标签.md
 ```
 
 该任务是一次输入和一次输出，不需要多轮状态或工具编排。
 
-## 具体例子 3：每周收集项目
+## 具体例子 4：每周收集项目
 
 ### 输入
 
@@ -54,10 +69,8 @@
 
 ```text
 类型：Agent
-组合：深度调研与事实核验 + Python 视觉算法项目复现 + Agent 工作流设计
+组合：deep-research-fact-checking + python-vision-project-reproduction + agent-workflow-design
 ```
-
-因为任务包含定时触发、多来源搜索、状态保存、去重和条件筛选。
 
 ## 最终能得到什么
 
