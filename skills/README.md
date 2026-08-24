@@ -1,55 +1,116 @@
 # Skills
 
-Skill 是带有固定执行顺序、中间状态、质量检查或工具编排的工作流。
+Skill 只保留**真正需要执行闭环**的工作流能力：读取真实环境、跨阶段产物、Gate、工具/脚本、文件修改、测试、构建或验证。
 
-每个 Skill 的 `SKILL.md` 必须包含：`description`、`input`、`workflow`、`rules`、`output`、`examples`。
+> 仅仅“有 5～7 个步骤”不构成 Skill。若这些步骤能在一次上下文里完成、最终只是输出文本或提示词，优先放 [`prompts/`](../prompts/README.md)。
 
-## 入口
+## Codex Skill 元数据
 
-- [提示词工程技能库](提示词工程技能库/SKILL.md)：根据任务类型路由到合适的 Prompt 模式或专项 Skill。
-- [提示词 Skill 来源与改编说明](../docs/提示词Skill来源.md)：记录官方文档、论文和开源社区来源。
+每个 `SKILL.md` 必须以 YAML frontmatter 开头：
 
-## 01 软件开发
+```yaml
+---
+name: directory-name
+description: 清楚写明触发条件、核心职责和与相邻能力的边界。
+---
+```
 
-- [Codex 任务执行](01-软件开发/Codex任务执行/SKILL.md)：仓库侦察 → 实施修改 → 测试验证 → 结果汇报。
-- [代码审查与修复](01-软件开发/代码审查与修复/SKILL.md)：影响面分析 → 缺陷分级 → 根因修复 → 回归验证。
-- [Java 项目架构分析](01-软件开发/Java项目架构分析/SKILL.md)：构建侦察 → 模块依赖 → 核心调用链 → 数据状态 → 风险与改造路线。
+`name` 必须与目录名一致并使用英文 `kebab-case`。
 
-## 02 研究分析
+## 产品研发
 
-- [深度调研与事实核验](02-研究分析/深度调研与事实核验/SKILL.md)：问题拆解 → 来源分级 → 交叉核验 → 决策建议。
-- [论文阅读与复现](02-研究分析/论文阅读与复现/SKILL.md)：论文地图 → 代码对照 → 成本估算 → 分阶段复现。
-- [Python 视觉算法项目复现](02-研究分析/Python视觉算法项目复现/SKILL.md)：兼容矩阵 → 隔离环境 → 官方 Demo → 自有数据 → 性能评测 → 训练 Gate。
+### 能力库：`product-development-skills`
 
-## 03 内容创作
+- `requirement-clarification`：信息不足时多轮澄清。
+- `requirement-analysis`：分析价值、根因、范围、角色、规则、风险、依赖和验证方式。
+- `solution-design`：形成候选产品/业务方案、模块、对象、状态、权限和核心流程。
+- `prd-writing`：把已确认方案写成研发/测试可使用的 PRD。
+- `requirement-review`：独立评审，输出 S0–S3 与 GO / CONDITIONAL GO / NO-GO。
+- `prototype-greenfield`：从零生成可运行、可点击前端原型。
+- `prototype-existing-project`：在已有前端项目中新增/修改高保真原型。
+- `version-retrospective`：版本复盘、根因与改进行动。
+- `project-knowledge-capture`：把多份项目资料沉淀成可追溯知识。
 
-- [结构化长文写作](03-内容创作/结构化长文写作/SKILL.md)：写作定位 → 证据提纲 → 初稿 → 批评修订。
+### 总控：`product-development-pipeline`
 
-## 04 图像视频
+跨多个产品阶段完整推进时使用。单独写 PRD、评审、做原型等任务直接使用专项 Skill。
 
-- [图像提示词设计](04-图像视频/图像提示词设计/SKILL.md)：主体叙事 → 空间构图 → 视觉控制 → 迭代变量。
-- [视频分镜提示词](04-图像视频/视频分镜提示词/SKILL.md)：叙事节拍 → 分镜表 → 单镜头 Prompt → 连续性检查。
+## 软件开发
 
-## 05 Agent 与自动化
+### `codex-task-execution`
 
-- [Agent 工作流设计](05-Agent与自动化/Agent工作流设计/SKILL.md)：选择 Chaining、Routing、Parallelization、Orchestrator-Workers、Evaluator-Optimizer 或 Agent。
-- [提示词优化与评测](05-Agent与自动化/提示词优化与评测/SKILL.md)：测试集 → 基线 → 失败归因 → 候选版本 → 回归发布。
+当前 Codex 直接执行：
 
-## 06 安全与质量
+```text
+读仓库 → 定位调用链 → 修改文件 → 补测试 → 跑测试/构建 → 修复失败 → 汇报真实结果
+```
 
-- [提示词注入防护](06-安全与质量/提示词注入防护/SKILL.md)：信任边界 → 最小权限 → 操作 Gate → 红队测试。
+如果只是想生成一份给另一个 Codex 的任务书，使用 [`prompts/software-development/codex-task-brief.md`](../prompts/software-development/codex-task-brief.md)。
 
-## 已有完整工作流
+### `code-review-fix`
 
-- [软件设计流水线](软件设计流水线/SKILL.md)
-- [分层镜头叙事](分层镜头叙事/SKILL.md)
-- [技术报告生成](技术报告生成/SKILL.md)
-- [风格参考研究](风格参考研究/SKILL.md)
+主动审查代码/PR，发现真实缺陷并在允许时修复、验证。
 
-## 收录标准
+### `java-project-architecture-analysis`
 
-1. 一次性输入输出放入 `prompts/`，不要包装成 Skill。
-2. 只有存在多步骤、状态、Gate、工具或质量检查时才放入 `skills/`。
-3. 新增内容必须注明来源或改编依据。
-4. 不直接复制低质量“万能 Prompt”。
-5. 新增后必须同步更新本索引。
+读取真实 Java/Spring 项目，分析模块、启动、调用链、数据/状态、集成和部署。
+
+## 研究分析
+
+- `deep-research-fact-checking`：外部多来源调研与事实核验。
+- `paper-reading-reproduction`：论文、代码、实验配置和复现条件对照。
+- `python-vision-project-reproduction`：在真实 Python/CUDA/GPU 环境中安装、运行、评测/训练并验证视觉项目。
+- `style-reference-research`：检索作者/作品资料，提炼可验证视觉风格参数。
+
+## Agent 工作流 / 质量 / 安全
+
+- `agent-workflow-design`：设计 Chaining、Routing、Parallel、Orchestrator、Evaluator 等 Agent 工作流。
+- `prompt-optimization-evaluation`：建立 Prompt/Skill 测试集、基线、失败归因和回归评测。
+- `prompt-injection-defense`：Agent 信任边界、最小权限、操作 Gate 和红队测试。
+
+## 图像与交互工作流
+
+### `layered-shot-narrative`
+
+已有影视剧照/场景参考时，直接生成连续 A/B/C/(D)/(E) 分层镜头图组，并执行人物、空间、色彩和跨帧连续性检查。
+
+普通单张生图提示词已移动到 [`prompts/image-generation/general/image-prompt-design.md`](../prompts/image-generation/general/image-prompt-design.md)。
+
+### `panorama-generation`
+
+360° equirectangular 全景资产 → Three.js 查看器 → 本地运行/映射/交互检查。
+
+它从 Prompt 升级为 Skill，因为存在真实资产、下游文件和验证链路。
+
+## 不再属于 Skill 的内容
+
+以下能力已经移动到 Prompt：
+
+- 单张图片提示词设计。
+- 通用视频分镜提示词。
+- 结构化长文写作。
+- 技术方案 → PPT/视频分镜。
+
+`workflow-router` 已移动到 [`agents/workflow-router`](../agents/workflow-router/README.md)，因为路由器是编排层，不应该作为业务 Skill 候选参与自动触发。
+
+## 新增 Skill 判断标准
+
+新增前至少确认满足一项强条件：
+
+- [ ] 必须读取真实仓库/文件/网络或工具结果。
+- [ ] 必须修改真实文件、代码或环境。
+- [ ] 上一步产物是下一步的真实输入。
+- [ ] 存在 Gate、失败回退或重试。
+- [ ] 必须运行测试、构建、启动或其他验证。
+- [ ] 需要 scripts/references/assets 支撑。
+- [ ] 需要跨阶段状态才能完成。
+
+如果全部都不满足，大概率应该是 Prompt。
+
+## 审计
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\audit-skill-metadata.ps1
+```
+
+规范见 [`docs/skill-description-guidelines.md`](../docs/skill-description-guidelines.md)。
