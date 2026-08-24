@@ -8,10 +8,11 @@
 - **Skills**：需要真实执行、跨阶段产物、Gate、工具、测试或验证的可复用能力。
 - **Agents**：负责在多个 Prompt / Skill 之间路由和编排。
 - **AGENTS.md**：具体代码仓库长期需要遵守的规则，不放在本库的业务 Skill 里。
+- **Plugins（预留）**：多个 Skill、工具、MCP、Hook、命令或 UI 的集成打包层；当前仓库尚未提供 `plugins/` 目录。
 
 ---
 
-# 1. Prompt / Skill / Agent 怎么区分
+# 1. Prompt / Skill / Agent / Plugin 怎么区分
 
 ## Prompt
 
@@ -68,6 +69,12 @@ JDK 必须使用 17
 ```
 
 这些规则不是某次任务流程，不应做成 Prompt/Skill。
+
+## Plugin（预留）
+
+Plugin 是更高一层的打包/集成形态。当一个能力需要同时组合多个 Skill、工具、MCP、Hook、命令或 UI 时，可以考虑 Plugin。
+
+当前仓库还没有 `plugins/` 目录，因此这里只把 Plugin 作为路由概念预留，不把普通 Prompt、单个 Skill 或 Agent 强行升级成 Plugin。
 
 ---
 
@@ -234,7 +241,7 @@ My-Prompts/
 
 只有在任务模糊、跨域，或明确问“应该用哪个 Prompt/Skill/Agent”时使用。
 
-它是裁判，不是参赛 Skill，因此放在 `agents/`，不会进入 Codex Skill 自动发现候选。
+它是裁判，不是参赛 Skill。这里放在 `agents/` 是为了仓库结构清晰；真正让它不属于 Codex Skill 候选的是：它使用 `AGENT.md` 而不是标准 `SKILL.md`，没有 Skill 的 `name + description` frontmatter，并且本仓库不会把它安装到 `.codex/skills` 或项目 `.agents/skills`。
 
 ## `product-development-agent`
 
