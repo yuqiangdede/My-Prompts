@@ -2,7 +2,7 @@
 
 Agent 是组合/路由层，用于在多个 Prompt 与 Skill 之间选择、编排并维护中间状态。
 
-它与 Codex Skill 不同：本仓库 `agents/` 下的文件**不应安装到 `.codex/skills` 或 `.agents/skills`**。
+它与 Codex Skill 不同：本仓库 `智能体/agents/` 下的文件**不应安装到 `.codex/skills` 或 `.agents/skills`**。
 
 ## 当前 Agent
 
@@ -21,14 +21,14 @@ Agent 是组合/路由层，用于在多个 Prompt 与 Skill 之间选择、编�
 显式让 Codex 读取 Agent 文件：
 
 ```text
-读取 My-Prompts/agents/workflow-router/AGENT.md，
+读取 My-Prompts/智能体/agents/workflow-router/AGENT.md，
 判断下面任务应该使用哪个入口：……
 ```
 
 或：
 
 ```text
-读取 My-Prompts/agents/product-development-agent/AGENT.md，
+读取 My-Prompts/智能体/agents/product-development-agent/AGENT.md，
 按这个 Agent 的路由与 Gate 推进下面产品需求：……
 ```
 

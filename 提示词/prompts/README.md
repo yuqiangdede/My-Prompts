@@ -9,8 +9,8 @@
 1. 选择最接近任务的 Prompt，再替换变量或补充输入。
 2. Prompt 不需要安装到 Codex Skill 目录。
 3. 可以直接复制 Prompt，也可以让 Codex 读取对应文件后执行。
-4. 需要读取真实仓库/网络、修改文件、跨阶段状态、Gate、测试或验证时，改用 [`skills/`](../skills/README.md)。
-5. 需要决定“该用哪个 Prompt / Skill / Agent”时，使用 [`agents/workflow-router/AGENT.md`](../agents/workflow-router/AGENT.md)。
+4. 需要读取真实仓库/网络、修改文件、跨阶段状态、Gate、测试或验证时，改用 [`技能/skills/`](../../技能/skills/README.md)。
+5. 需要决定“该用哪个 Prompt / Skill / Agent”时，使用 [`智能体/agents/workflow-router/AGENT.md`](../../智能体/agents/workflow-router/AGENT.md)。
 
 ## 产品定义
 
@@ -20,7 +20,7 @@
 
 - [`software-development/codex-task-brief.md`](software-development/codex-task-brief.md)：把开发需求整理成可复制给**另一个** Codex/编码 Agent 的完整任务书。
 
-如果当前 Codex 要直接修改仓库并运行验证，使用 `skills/software-development/codex-task-execution`。
+如果当前 Codex 要直接修改仓库并运行验证，使用 `技能/skills/software-development/codex-task-execution`。
 
 ## 写作
 
@@ -77,7 +77,7 @@
 
 - [`image-generation/style-transfer/`](image-generation/style-transfer/)：调色、LUT、油画、老照片等。
 
-360° 全景已经升级为需要文件生成与查看器验证的 Skill：[`skills/panorama-generation`](../skills/panorama-generation/README.md)。
+360° 全景已经升级为需要文件生成与查看器验证的 Skill：[`技能/skills/panorama-generation`](../../技能/skills/panorama-generation/README.md)。
 
 ## 新增 Prompt 判断标准
 

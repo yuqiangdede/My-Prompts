@@ -2,7 +2,7 @@
 
 Skill 只保留**真正需要执行闭环**的工作流能力：读取真实环境、跨阶段产物、Gate、工具/脚本、文件修改、测试、构建或验证。
 
-> 仅仅“有 5～7 个步骤”不构成 Skill。若这些步骤能在一次上下文里完成、最终只是输出文本或提示词，优先放 [`prompts/`](../prompts/README.md)。
+> 仅仅“有 5～7 个步骤”不构成 Skill。若这些步骤能在一次上下文里完成、最终只是输出文本或提示词，优先放 [`提示词/prompts/`](../../提示词/prompts/README.md)。
 
 ## Codex Skill 元数据
 
@@ -45,7 +45,7 @@ description: 清楚写明触发条件、核心职责和与相邻能力的边界�
 读仓库 → 定位调用链 → 修改文件 → 补测试 → 跑测试/构建 → 修复失败 → 汇报真实结果
 ```
 
-如果只是想生成一份给另一个 Codex 的任务书，使用 [`prompts/software-development/codex-task-brief.md`](../prompts/software-development/codex-task-brief.md)。
+如果只是想生成一份给另一个 Codex 的任务书，使用 [`提示词/prompts/software-development/codex-task-brief.md`](../../提示词/prompts/software-development/codex-task-brief.md)。
 
 ### `code-review-fix`
 
@@ -74,7 +74,7 @@ description: 清楚写明触发条件、核心职责和与相邻能力的边界�
 
 已有影视剧照/场景参考时，直接生成连续 A/B/C/(D)/(E) 分层镜头图组，并执行人物、空间、色彩和跨帧连续性检查。
 
-普通单张生图提示词已移动到 [`prompts/image-generation/general/image-prompt-design.md`](../prompts/image-generation/general/image-prompt-design.md)。
+普通单张生图提示词已移动到 [`提示词/prompts/image-generation/general/image-prompt-design.md`](../../提示词/prompts/image-generation/general/image-prompt-design.md)。
 
 ### `panorama-generation`
 
@@ -91,7 +91,7 @@ description: 清楚写明触发条件、核心职责和与相邻能力的边界�
 - 结构化长文写作。
 - 技术方案 → PPT/视频分镜。
 
-`workflow-router` 已移动到 [`agents/workflow-router`](../agents/workflow-router/README.md)，因为路由器是编排层，不应该作为业务 Skill 候选参与自动触发。
+`workflow-router` 已移动到 [`智能体/agents/workflow-router`](../../智能体/agents/workflow-router/README.md)，因为路由器是编排层，不应该作为业务 Skill 候选参与自动触发。
 
 ## 新增 Skill 判断标准
 
@@ -113,4 +113,4 @@ description: 清楚写明触发条件、核心职责和与相邻能力的边界�
 powershell -ExecutionPolicy Bypass -File .\scripts\audit-skill-metadata.ps1
 ```
 
-规范见 [`docs/skill-description-guidelines.md`](../docs/skill-description-guidelines.md)。
+规范见 [`docs/skill-description-guidelines.md`](../../docs/skill-description-guidelines.md)。
