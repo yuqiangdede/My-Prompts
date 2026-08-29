@@ -73,7 +73,7 @@ product-development-agent/
 workflow-router/
 ```
 
-`workflow-router` 位于 `agents/`，不是 `skills/`。
+`workflow-router` 位于 `智能体/agents/`，不是 `技能/skills/`。
 
 ### Pipeline
 
@@ -152,5 +152,5 @@ SKILL name：product-development-pipeline
 - [ ] 是否先判断应该是 Prompt、Skill 还是 Agent？
 - [ ] 如果是 Skill，是否确实存在真实执行/验证闭环？
 - [ ] 是否已更新对应索引？
-- [ ] 是否需要更新 `agents/workflow-router`？
+- [ ] 是否需要更新 `智能体/agents/workflow-router`？
 - [ ] 是否存在跨目录引用需要同步修改？
