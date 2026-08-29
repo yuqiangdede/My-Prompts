@@ -16,7 +16,7 @@ param(
 $ErrorActionPreference = "Stop"
 
 $RepoRoot = Split-Path -Parent $PSScriptRoot
-$SkillsRoot = Join-Path $RepoRoot "skills"
+$SkillsRoot = Join-Path $RepoRoot (([string][char]0x6280) + [char]0x80FD + "\skills")
 
 if (-not (Test-Path $SkillsRoot)) {
     throw "Skills directory not found: $SkillsRoot"

@@ -2,9 +2,25 @@
 
 本规范用于保证 Prompt、Skill、Agent 和文档在 GitHub、Codex、脚本及自动化工具中具有稳定、可预测的路径。
 
-## 1. 目录命名
+## 1. 分层目录命名
 
-所有目录统一使用英文 `kebab-case`：
+仓库根目录保留中文展示层：
+
+```text
+提示词/
+技能/
+智能体/
+docs/
+scripts/
+```
+
+其中：
+
+- `提示词/`、`技能/`、`智能体/` 是面向人工浏览的中文展示层。
+- `prompts/`、`skills/`、`agents/` 是面向脚本、自动发现和稳定链接的英文机器命名空间。
+- `docs/`、`scripts/` 继续保留在仓库根目录，不进入中文展示层。
+
+英文机器命名空间及其内部能力目录统一使用英文 `kebab-case`：
 
 ```text
 product-development-pipeline
@@ -15,7 +31,7 @@ technical-communication
 panorama-generation
 ```
 
-禁止：中文目录、空格、下划线、中文标点、大小写混排，以及仅用于人工排序的 `01-`、`02-` 前缀。
+禁止在英文机器命名空间及其内部目录中使用：中文、空格、下划线、中文标点、大小写混排，以及仅用于人工排序的 `01-`、`02-` 前缀。
 
 名称应表达稳定职责，不表达临时版本或人员名称。
 
@@ -86,7 +102,7 @@ AGENT.md
 例如：
 
 ```text
-目录：skills/product-development-pipeline/
+展示层目录：技能/skills/product-development-pipeline/
 README 标题：# 产品研发流水线
 SKILL name：product-development-pipeline
 正文：中文
@@ -94,24 +110,24 @@ SKILL name：product-development-pipeline
 
 ## 5. 跨目录引用
 
-必须使用当前英文路径，不引用历史别名。
+必须使用当前分层路径；顶层入口使用中文展示层，机器命名空间保持英文，不引用历史根级别别名。
 
 例如：
 
 ```text
-skills/product-development-skills/requirement-analysis/SKILL.md
-skills/software-development/codex-task-execution/SKILL.md
-skills/panorama-generation/SKILL.md
-prompts/technical-communication/technical-to-ppt-storyboard.md
-agents/workflow-router/AGENT.md
-agents/product-development-agent/AGENT.md
+技能/skills/product-development-skills/requirement-analysis/SKILL.md
+技能/skills/software-development/codex-task-execution/SKILL.md
+技能/skills/panorama-generation/SKILL.md
+提示词/prompts/technical-communication/technical-to-ppt-storyboard.md
+智能体/agents/workflow-router/AGENT.md
+智能体/agents/product-development-agent/AGENT.md
 ```
 
 修改目录或分类时同步检查：
 
 1. 根 `README.md`。
-2. `prompts/README.md` / `skills/README.md` / `agents/README.md`。
-3. `agents/workflow-router/AGENT.md`。
+2. `提示词/prompts/README.md` / `技能/skills/README.md` / `智能体/agents/README.md`。
+3. `智能体/agents/workflow-router/AGENT.md`。
 4. 其他 Agent 的 Composition / Routing。
 5. `docs/迁移映射.md`。
 6. `docs/skill-description-guidelines.md`。
@@ -125,7 +141,7 @@ agents/product-development-agent/AGENT.md
 - 明确标记 Legacy 的参考文档。
 - Git 历史。
 
-历史路径不得继续作为当前执行入口。
+历史根级路径 `prompts/`、`skills/`、`agents/` 不得继续作为当前执行入口。
 
 ## 7. 新增目录检查表
 

@@ -4,6 +4,13 @@ Skill 只保留**真正需要执行闭环**的工作流能力：读取真实环�
 
 > 仅仅“有 5～7 个步骤”不构成 Skill。若这些步骤能在一次上下文里完成、最终只是输出文本或提示词，优先放 [`提示词/prompts/`](../../提示词/prompts/README.md)。
 
+当前仓库分层路径规则：
+
+- 中文展示层：`提示词/`、`技能/`、`智能体/`
+- 英文机器命名空间：`prompts/`、`skills/`、`agents/`
+- 当前 Skill 入口：`技能/skills/`
+- `docs/`、`scripts/` 继续保留在仓库根目录
+
 ## Codex Skill 元数据
 
 每个 `SKILL.md` 必须以 YAML frontmatter 开头：
@@ -114,3 +121,11 @@ powershell -ExecutionPolicy Bypass -File .\scripts\audit-skill-metadata.ps1
 ```
 
 规范见 [`docs/skill-description-guidelines.md`](../../docs/skill-description-guidelines.md)。
+
+安装入口：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\install-codex-skills.ps1 -List
+```
+
+该脚本从仓库内 `技能\skills\` 解析 Skill 目录，Skill 名称继续使用英文目录名。
