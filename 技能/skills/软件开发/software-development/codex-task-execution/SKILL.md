@@ -1,6 +1,6 @@
 ---
 name: codex-task-execution
-description: 当用户已经有明确的软件开发、修改或修复目标，并希望当前 Codex 直接在现有仓库中读取代码、实施修改、运行测试/构建并交付结果时使用。负责真正完成代码变更；如果只是要生成一份可复制给其他 Codex 的任务书，使用 prompts/software-development/codex-task-brief.md；主动代码审查使用 code-review-fix，Java 架构摸底使用 java-project-architecture-analysis。
+description: 当用户已经有明确的软件开发、修改或修复目标，并希望当前 Codex 直接在现有仓库中读取代码、实施修改、运行测试/构建并交付结果时使用。负责真正完成代码变更；如果只是要生成一份可复制给其他 Codex 的任务书，使用 提示词/prompts/软件开发/software-development/codex-task-brief.md；主动代码审查使用 code-review-fix，Java 架构摸底使用 java-project-architecture-analysis。
 ---
 
 # Codex 任务执行
