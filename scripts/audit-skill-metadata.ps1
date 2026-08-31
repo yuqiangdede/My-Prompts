@@ -8,7 +8,7 @@ if ([string]::IsNullOrWhiteSpace($Root)) {
     $Root = Split-Path -Parent $PSScriptRoot
 }
 
-$SkillsRoot = Join-Path $Root "skills"
+$SkillsRoot = Join-Path $Root "技能\skills"
 if (-not (Test-Path $SkillsRoot)) {
     throw "Skills directory not found: $SkillsRoot"
 }
