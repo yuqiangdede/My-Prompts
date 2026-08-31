@@ -63,7 +63,7 @@ Skill 只保留**真正需要执行闭环**的工作流能力：读取真实环�
 - `code-review-fix`：主动审查代码/PR，发现真实缺陷并在允许时修复、验证。
 - `java-project-architecture-analysis`：读取真实 Java/Spring 项目，分析模块、启动、调用链、数据/状态、集成和部署。
 
-如果只是想生成一份给另一个 Codex 的任务书，使用 [`提示词/prompts/software-development/codex-task-brief.md`](../../提示词/prompts/software-development/codex-task-brief.md)。
+如果只是想生成一份给另一个 Codex 的任务书，使用 [`提示词/prompts/软件开发/software-development/codex-task-brief.md`](../../提示词/prompts/软件开发/software-development/codex-task-brief.md)。
 
 ## 研究与复现
 
@@ -83,7 +83,7 @@ Skill 只保留**真正需要执行闭环**的工作流能力：读取真实环�
 - `layered-shot-narrative`：已有影视剧照/场景参考时，生成连续 A/B/C/(D)/(E) 分层镜头图组并检查连续性。
 - `panorama-generation`：360° equirectangular 全景资产 → Three.js 查看器 → 本地运行/映射/交互检查。
 
-普通单张生图提示词位于 [`提示词/prompts/image-generation/`](../../提示词/prompts/image-generation/)。
+普通单张生图提示词位于 [`提示词/prompts/图像生成/image-generation/`](../../提示词/prompts/图像生成/image-generation/)。
 
 ## 智能体与自动化
 
