@@ -2,80 +2,126 @@
 
 这里存放**一次性、单任务模板**：补全输入后交给模型处理，不依赖真实环境中的跨阶段状态、Gate、测试闭环或持续工具编排。
 
-> 内部步骤很多，不代表它就是 Skill。只要这些步骤可以在一次上下文内完成、最终主要输出仍是一段文本/提示词，就优先放 Prompt。
+> 内部步骤很多，不代表它就是 Skill。只要这些步骤可以在一次上下文内完成、最终主要输出仍是一段文本、提示词、JSON、表格或一次性分析，就优先放 Prompt。
+
+## 目录规则
+
+Prompt 采用：
+
+```text
+提示词/
+└── prompts/
+    └── 中文分类/
+        └── english-prompt-group/
+```
+
+中文分类层只用于人工浏览和归类；英文机器目录继续使用 `kebab-case`，作为稳定路径的一部分。
+
+当前分类：
+
+```text
+产品与业务/
+软件开发/
+内容写作/
+技术汇报/
+视频生成/
+视觉理解/
+安全合规/
+地理空间/
+图像生成/
+```
 
 ## 使用原则
 
-1. 选择最接近任务的 Prompt，再替换变量或补充输入。
+1. 先选择最接近任务的中文分类，再进入英文机器目录。
 2. Prompt 不需要安装到 Codex Skill 目录。
 3. 可以直接复制 Prompt，也可以让 Codex 读取对应文件后执行。
 4. 需要读取真实仓库/网络、修改文件、跨阶段状态、Gate、测试或验证时，改用 [`技能/skills/`](../../技能/skills/README.md)。
-5. 需要决定“该用哪个 Prompt / Skill / Agent”时，使用 [`智能体/agents/workflow-router/AGENT.md`](../../智能体/agents/workflow-router/AGENT.md)。
+5. 需要决定“该用哪个 Prompt / Skill / Agent”时，使用 [`智能体/agents/工作流编排/workflow-router/AGENT.md`](../../智能体/agents/工作流编排/workflow-router/AGENT.md)。
 
-## 产品定义
+## 产品与业务
 
-- [`product-definition/想法产品化.md`](product-definition/想法产品化.md)：模糊想法 → 用户、场景、MVP、闭环、验收、指标、风险和路线图草案。
+目录：[`产品与业务/`](产品与业务/)
+
+- [`product-definition/想法产品化.md`](产品与业务/product-definition/想法产品化.md)：模糊想法 → 用户、场景、MVP、闭环、验收、指标、风险和路线图草案。
 
 ## 软件开发
 
-- [`software-development/codex-task-brief.md`](software-development/codex-task-brief.md)：把开发需求整理成可复制给**另一个** Codex/编码 Agent 的完整任务书。
+目录：[`软件开发/`](软件开发/)
+
+- [`software-development/codex-task-brief.md`](软件开发/software-development/codex-task-brief.md)：把开发需求整理成可复制给**另一个** Codex / 编码 Agent 的完整任务书。
 
 如果当前 Codex 要直接修改仓库并运行验证，使用 `技能/skills/软件开发/software-development/codex-task-execution`。
 
-## 写作
+## 内容写作
 
-- [`writing/structured-longform-writing.md`](writing/structured-longform-writing.md)：主题/素材 → 提纲 → 完整长文 → 批评检查与修订。
+目录：[`内容写作/`](内容写作/)
+
+- [`writing/structured-longform-writing.md`](内容写作/writing/structured-longform-writing.md)：主题/素材 → 提纲 → 完整长文 → 批评检查与修订。
 
 如果需要真实外部资料检索与事实核验，先用 `deep-research-fact-checking` Skill。
 
-## 技术汇报脚本
+## 技术汇报
 
-- [`technical-communication/technical-to-ppt-storyboard.md`](technical-communication/technical-to-ppt-storyboard.md)：技术方案 → PPT 分镜脚本。
-- [`technical-communication/technical-to-video-storyboard.md`](technical-communication/technical-to-video-storyboard.md)：技术方案 → 视频分镜、旁白和 timing JSON。
+目录：[`技术汇报/`](技术汇报/)
 
-注意：这里交付的是制作脚本，不是最终 PPTX/视频文件。
+- [`technical-communication/technical-to-ppt-storyboard.md`](技术汇报/technical-communication/technical-to-ppt-storyboard.md)：技术方案 → PPT 分镜脚本。
+- [`technical-communication/technical-to-video-storyboard.md`](技术汇报/technical-communication/technical-to-video-storyboard.md)：技术方案 → 视频分镜、旁白和 timing JSON。
+- [`technical-communication/examples/`](技术汇报/technical-communication/examples/)：AIS / ClickHouse 示例。
 
-## 视频生成 Prompt
+这里交付的是制作脚本，不是最终 PPTX / 视频文件。
 
-- [`video-generation/storyboard-design.md`](video-generation/storyboard-design.md)：故事、产品演示、业务流程 → 通用视频分镜和每镜头提示词。
+## 视频生成
 
-如果需要直接生成连续静帧并检查人物/场景连续性，使用 `layered-shot-narrative` Skill。
+目录：[`视频生成/`](视频生成/)
 
-## 视觉与多模态理解
+- [`video-generation/storyboard-design.md`](视频生成/video-generation/storyboard-design.md)：故事、产品演示、业务流程 → 通用视频分镜和每镜头提示词。
 
-- [`vision-multimodal-understanding/`](vision-multimodal-understanding/)：图片标签等视觉理解模板。
+如果需要直接生成连续静帧并检查人物/场景连续性，使用 `技能/skills/图像与视觉/layered-shot-narrative`。
 
-## 安全、合规与风险
+## 视觉理解
 
-- [`safety-compliance-risk/图片隐私风险分析.md`](safety-compliance-risk/图片隐私风险分析.md)：图片发布前隐私与安全风险初筛。
+目录：[`视觉理解/`](视觉理解/)
 
-## 地理与空间智能
+- [`vision-multimodal-understanding/`](视觉理解/vision-multimodal-understanding/)：图片标签等视觉理解模板。
 
-- [`geospatial-intelligence/图片地理位置分析.md`](geospatial-intelligence/图片地理位置分析.md)：基于可见证据输出候选区域、反证和置信度。
+## 安全合规
+
+目录：[`安全合规/`](安全合规/)
+
+- [`safety-compliance-risk/图片隐私风险分析.md`](安全合规/safety-compliance-risk/图片隐私风险分析.md)：图片发布前隐私与安全风险初筛。
+
+## 地理空间
+
+目录：[`地理空间/`](地理空间/)
+
+- [`geospatial-intelligence/图片地理位置分析.md`](地理空间/geospatial-intelligence/图片地理位置分析.md)：基于可见证据输出候选区域、反证和置信度。
 
 如果以后任务升级为“图片 → OCR → Web/地图检索 → 候选核验 → 排除”，应升级为 Skill，而不是继续扩大本 Prompt。
 
-## 生图 Prompt
+## 图像生成
+
+目录：[`图像生成/`](图像生成/)
 
 ### 通用
 
-- [`image-generation/general/image-prompt-design.md`](image-generation/general/image-prompt-design.md)：独立单张图的结构化生图提示词。
+- [`image-generation/general/image-prompt-design.md`](图像生成/image-generation/general/image-prompt-design.md)：独立单张图的结构化生图提示词。
 
 ### 建筑
 
-- [`image-generation/architecture/`](image-generation/architecture/)：建筑分析/技术视觉 Prompt。
+- [`image-generation/architecture/`](图像生成/image-generation/architecture/)：建筑分析/技术视觉 Prompt。
 
 ### 人物图谱
 
-- [`image-generation/character-reference/`](image-generation/character-reference/)：人物关系、人物参考图。
+- [`image-generation/character-reference/`](图像生成/image-generation/character-reference/)：人物关系、人物参考图。
 
 ### 人物肖像
 
-- [`image-generation/character-portrait/`](image-generation/character-portrait/)：职业照、时尚、电影肖像、杂志封面、九宫格、发型等。
+- [`image-generation/character-portrait/`](图像生成/image-generation/character-portrait/)：职业照、时尚、电影肖像、杂志封面、九宫格、海报、发型等。
 
 ### 风格转换
 
-- [`image-generation/style-transfer/`](image-generation/style-transfer/)：调色、LUT、油画、老照片等。
+- [`image-generation/style-transfer/`](图像生成/image-generation/style-transfer/)：调色、LUT、油画、老照片等。
 
 360° 全景已经升级为需要文件生成与查看器验证的 Skill：[`技能/skills/图像与视觉/panorama-generation`](../../技能/skills/图像与视觉/panorama-generation/README.md)。
 
@@ -91,6 +137,15 @@
 - [ ] 不需要多个工具结果作为后续真实输入。
 
 如果其中多项不成立，应考虑 Skill。
+
+## 新增 Prompt 分类检查
+
+- [ ] 是否先选了稳定的中文业务分类？
+- [ ] 英文机器目录是否使用 `kebab-case`？
+- [ ] 中文分类层是否只承担展示和归类职责？
+- [ ] 是否避免为了排序添加 `01-`、`02-` 等机器目录前缀？
+- [ ] 是否已同步根 README 和本索引？
+- [ ] 是否存在跨目录链接需要更新？
 
 ## 质量检查
 
