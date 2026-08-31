@@ -1,6 +1,6 @@
 ---
 name: panorama-generation
-description: 当用户需要完成 360° 等距柱状全景内容，并希望把全景资产接入可运行的 Three.js/WebGL 查看器进行交互查看与验证时使用。负责“全景资产 → 查看器文件 → 映射/交互检查”的完整工作流；如果只需要一段普通单图生图提示词，使用 prompts/image-generation/general/image-prompt-design.md。
+description: 当用户需要完成 360° 等距柱状全景内容，并希望把全景资产接入可运行的 Three.js/WebGL 查看器进行交互查看与验证时使用。负责“全景资产 → 查看器文件 → 映射/交互检查”的完整工作流；如果只需要一段普通单图生图提示词，使用 提示词/prompts/图像生成/image-generation/general/image-prompt-design.md。
 ---
 
 # Panorama Generation
