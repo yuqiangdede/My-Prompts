@@ -18,13 +18,13 @@
 
 ### 产品研发
 
-- 模糊想法一次性产品化草案 → `提示词/prompts/product-definition/想法产品化.md`
+- 模糊想法一次性产品化草案 → `提示词/prompts/产品与业务/product-definition/想法产品化.md`
 - 单阶段澄清/分析/方案/PRD/评审/原型 → `技能/skills/产品研发/product-development-skills/` 对应 Skill
 - 从模糊需求一路推进到 PRD/页面/原型 → `技能/skills/产品研发/product-development-pipeline`
 
 ### 软件开发
 
-- 给另一个 Codex 写任务书 → `提示词/prompts/software-development/codex-task-brief.md`
+- 给另一个 Codex 写任务书 → `提示词/prompts/软件开发/software-development/codex-task-brief.md`
 - 当前 Codex 直接修改仓库并验证 → `codex-task-execution`
 - Java 系统摸底与调用链/架构理解 → `java-project-architecture-analysis`
 - 主动审查代码/PR、发现问题并修复 → `code-review-fix`
@@ -38,13 +38,13 @@
 
 ### 写作与汇报
 
-- 一次性长文写作 → `提示词/prompts/writing/structured-longform-writing.md`
-- 技术方案转 PPT/视频分镜 → `提示词/prompts/technical-communication/`
+- 一次性长文写作 → `提示词/prompts/内容写作/writing/structured-longform-writing.md`
+- 技术方案转 PPT/视频分镜 → `提示词/prompts/技术汇报/technical-communication/`
 
 ### 图像视频
 
-- 单张/独立图像提示词 → `提示词/prompts/image-generation/general/image-prompt-design.md`
-- 通用视频分镜 → `提示词/prompts/video-generation/storyboard-design.md`
+- 单张/独立图像提示词 → `提示词/prompts/图像生成/image-generation/general/image-prompt-design.md`
+- 通用视频分镜 → `提示词/prompts/视频生成/video-generation/storyboard-design.md`
 - 已有剧照/参考画面，直接生成连续分层镜头图组 → `layered-shot-narrative`
 - 360° 全景图 + 查看器完整工作流 → `panorama-generation`
 
