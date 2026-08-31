@@ -19,8 +19,8 @@
 ### 产品研发
 
 - 模糊想法一次性产品化草案 → `提示词/prompts/product-definition/想法产品化.md`
-- 单阶段澄清/分析/方案/PRD/评审/原型 → `技能/skills/product-development-skills/` 对应 Skill
-- 从模糊需求一路推进到 PRD/页面/原型 → `技能/skills/product-development-pipeline`
+- 单阶段澄清/分析/方案/PRD/评审/原型 → `技能/skills/产品研发/product-development-skills/` 对应 Skill
+- 从模糊需求一路推进到 PRD/页面/原型 → `技能/skills/产品研发/product-development-pipeline`
 
 ### 软件开发
 
