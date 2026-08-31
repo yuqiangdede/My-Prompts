@@ -1,9 +1,21 @@
 # 技术汇报
 
-面向技术方案的 PPT 分镜、视频分镜、讲述结构等一次性 Prompt。
+本分类管理**技术方案的 PPT 分镜、视频分镜和讲述结构**相关一次性 Prompt。
 
-## 当前目录
+## 定位
 
-- [`technical-communication/`](technical-communication/)：技术方案 → PPT 页级脚本 / 视频分镜、旁白与 timing。
+输入通常已经是一份相对完整的技术方案，本分类负责把它转换成可交给后续制作工具的页级或镜头级脚本。
 
-这里主要生成制作脚本，不等同于最终 PPTX 或视频文件。
+## 目录
+
+| 目录 | 说明 |
+| --- | --- |
+| [`technical-communication/`](technical-communication/) | 技术方案 → PPT 页级脚本 / 视频分镜、旁白与 timing |
+
+## 边界
+
+这里主要生成制作脚本，不等同于最终 PPTX 或视频文件。需要直接生成并验收成品时，应使用具备真实文件生成能力的下游工具或 Skill。
+
+## 返回上级
+
+[返回 Prompts 索引](../README.md)

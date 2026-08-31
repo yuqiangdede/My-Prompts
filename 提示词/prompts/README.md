@@ -1,12 +1,21 @@
-# Prompts
+# 提示词（Prompts）
 
-这里存放**一次性、单任务模板**：补全输入后交给模型处理，不依赖真实环境中的跨阶段状态、Gate、测试闭环或持续工具编排。
+本目录存放**一次性、单任务 Prompt 模板**：补全输入后交给模型处理，不依赖真实环境中的跨阶段状态、Gate、测试闭环或持续工具编排。
 
-> 内部步骤很多，不代表它就是 Skill。只要这些步骤可以在一次上下文内完成、最终主要输出仍是一段文本、提示词、JSON、表格或一次性分析，就优先放 Prompt。
+> 内部步骤很多，不代表它就是 Skill。只要这些步骤可以在一次上下文内完成，最终主要产物仍是文本、Prompt、JSON、表格或一次性分析，就优先放 Prompt。
 
-## 目录规则
+## 定位
 
-Prompt 采用：
+Prompt 适合：
+
+- 一次输入即可完成的文本、分析或结构化输出任务。
+- 生图、视频分镜、技术汇报、写作等一次性生成任务。
+- 为其他 Agent / Codex 整理可复制的任务说明。
+- 不需要真实修改外部环境，也不需要跨阶段状态和验证闭环的工作。
+
+如果需要读取真实仓库、文件、网络或工具结果，修改文件、运行测试或维护 Gate，应改用 [`技能/skills/`](../../技能/skills/README.md)。
+
+## 目录结构
 
 ```text
 提示词/
@@ -15,117 +24,31 @@ Prompt 采用：
         └── english-prompt-group/
 ```
 
-中文分类层只用于人工浏览和归类；英文机器目录继续使用 `kebab-case`，作为稳定路径的一部分。
+中文分类层用于人工浏览和归类；英文机器目录继续使用稳定的 `kebab-case`。
 
-当前分类：
+## 分类导航
 
-```text
-产品与业务/
-软件开发/
-内容写作/
-技术汇报/
-视频生成/
-视觉理解/
-安全合规/
-地理空间/
-图像生成/
-```
+| 分类 | 目录 | 说明 |
+| --- | --- | --- |
+| 产品与业务 | [`产品与业务/`](产品与业务/) | 产品定义、业务梳理、MVP 与方案草案 |
+| 软件开发 | [`软件开发/`](软件开发/) | 开发任务说明、编码 Agent 输入整理 |
+| 内容写作 | [`内容写作/`](内容写作/) | 文章、报告和结构化长文本 |
+| 技术汇报 | [`技术汇报/`](技术汇报/) | PPT 分镜、视频讲解脚本和汇报结构 |
+| 视频生成 | [`视频生成/`](视频生成/) | 故事、产品演示和业务流程的视频分镜 |
+| 视觉理解 | [`视觉理解/`](视觉理解/) | 图片标签、内容理解和多模态分析 |
+| 安全合规 | [`安全合规/`](安全合规/) | 图片发布、共享等场景的安全与隐私初筛 |
+| 地理空间 | [`地理空间/`](地理空间/) | 图片地理位置推断和空间证据分析 |
+| 图像生成 | [`图像生成/`](图像生成/) | 单张图像、人物、建筑和风格转换 Prompt |
 
 ## 使用原则
 
 1. 先选择最接近任务的中文分类，再进入英文机器目录。
 2. Prompt 不需要安装到 Codex Skill 目录。
 3. 可以直接复制 Prompt，也可以让 Codex 读取对应文件后执行。
-4. 需要读取真实仓库/网络、修改文件、跨阶段状态、Gate、测试或验证时，改用 [`技能/skills/`](../../技能/skills/README.md)。
-5. 需要决定“该用哪个 Prompt / Skill / Agent”时，使用 [`智能体/agents/工作流编排/workflow-router/AGENT.md`](../../智能体/agents/工作流编排/workflow-router/AGENT.md)。
+4. 需要真实执行闭环时，改用 [`技能/skills/`](../../技能/skills/README.md)。
+5. 任务目标模糊或需要决定“该用哪个 Prompt / Skill / Agent”时，使用 [`workflow-router`](../../智能体/agents/工作流编排/workflow-router/README.md)。
 
-## 产品与业务
-
-目录：[`产品与业务/`](产品与业务/)
-
-- [`product-definition/想法产品化.md`](产品与业务/product-definition/想法产品化.md)：模糊想法 → 用户、场景、MVP、闭环、验收、指标、风险和路线图草案。
-
-## 软件开发
-
-目录：[`软件开发/`](软件开发/)
-
-- [`software-development/codex-task-brief.md`](软件开发/software-development/codex-task-brief.md)：把开发需求整理成可复制给**另一个** Codex / 编码 Agent 的完整任务书。
-
-如果当前 Codex 要直接修改仓库并运行验证，使用 `技能/skills/软件开发/software-development/codex-task-execution`。
-
-## 内容写作
-
-目录：[`内容写作/`](内容写作/)
-
-- [`writing/structured-longform-writing.md`](内容写作/writing/structured-longform-writing.md)：主题/素材 → 提纲 → 完整长文 → 批评检查与修订。
-
-如果需要真实外部资料检索与事实核验，先用 `deep-research-fact-checking` Skill。
-
-## 技术汇报
-
-目录：[`技术汇报/`](技术汇报/)
-
-- [`technical-communication/technical-to-ppt-storyboard.md`](技术汇报/technical-communication/technical-to-ppt-storyboard.md)：技术方案 → PPT 分镜脚本。
-- [`technical-communication/technical-to-video-storyboard.md`](技术汇报/technical-communication/technical-to-video-storyboard.md)：技术方案 → 视频分镜、旁白和 timing JSON。
-- [`technical-communication/examples/`](技术汇报/technical-communication/examples/)：AIS / ClickHouse 示例。
-
-这里交付的是制作脚本，不是最终 PPTX / 视频文件。
-
-## 视频生成
-
-目录：[`视频生成/`](视频生成/)
-
-- [`video-generation/storyboard-design.md`](视频生成/video-generation/storyboard-design.md)：故事、产品演示、业务流程 → 通用视频分镜和每镜头提示词。
-
-如果需要直接生成连续静帧并检查人物/场景连续性，使用 `技能/skills/图像与视觉/layered-shot-narrative`。
-
-## 视觉理解
-
-目录：[`视觉理解/`](视觉理解/)
-
-- [`vision-multimodal-understanding/`](视觉理解/vision-multimodal-understanding/)：图片标签等视觉理解模板。
-
-## 安全合规
-
-目录：[`安全合规/`](安全合规/)
-
-- [`safety-compliance-risk/图片隐私风险分析.md`](安全合规/safety-compliance-risk/图片隐私风险分析.md)：图片发布前隐私与安全风险初筛。
-
-## 地理空间
-
-目录：[`地理空间/`](地理空间/)
-
-- [`geospatial-intelligence/图片地理位置分析.md`](地理空间/geospatial-intelligence/图片地理位置分析.md)：基于可见证据输出候选区域、反证和置信度。
-
-如果以后任务升级为“图片 → OCR → Web/地图检索 → 候选核验 → 排除”，应升级为 Skill，而不是继续扩大本 Prompt。
-
-## 图像生成
-
-目录：[`图像生成/`](图像生成/)
-
-### 通用
-
-- [`image-generation/general/image-prompt-design.md`](图像生成/image-generation/general/image-prompt-design.md)：独立单张图的结构化生图提示词。
-
-### 建筑
-
-- [`image-generation/architecture/`](图像生成/image-generation/architecture/)：建筑分析/技术视觉 Prompt。
-
-### 人物图谱
-
-- [`image-generation/character-reference/`](图像生成/image-generation/character-reference/)：人物关系、人物参考图。
-
-### 人物肖像
-
-- [`image-generation/character-portrait/`](图像生成/image-generation/character-portrait/)：职业照、时尚、电影肖像、杂志封面、九宫格、海报、发型等。
-
-### 风格转换
-
-- [`image-generation/style-transfer/`](图像生成/image-generation/style-transfer/)：调色、LUT、油画、老照片等。
-
-360° 全景已经升级为需要文件生成与查看器验证的 Skill：[`技能/skills/图像与视觉/panorama-generation`](../../技能/skills/图像与视觉/panorama-generation/README.md)。
-
-## 新增 Prompt 判断标准
+## 新增 Prompt 判断
 
 优先放 Prompt，当：
 
@@ -133,27 +56,31 @@ Prompt 采用：
 - [ ] 最终主要产物是文本、Prompt、JSON、表格或一次性分析。
 - [ ] 不需要真实修改外部环境。
 - [ ] 不需要跨阶段保存状态。
-- [ ] 不需要 Gate/回退/测试闭环。
+- [ ] 不需要 Gate、回退或测试闭环。
 - [ ] 不需要多个工具结果作为后续真实输入。
 
 如果其中多项不成立，应考虑 Skill。
 
-## 新增 Prompt 分类检查
+## 新增分类检查
 
-- [ ] 是否先选了稳定的中文业务分类？
+- [ ] 是否先选择稳定的中文业务分类？
 - [ ] 英文机器目录是否使用 `kebab-case`？
 - [ ] 中文分类层是否只承担展示和归类职责？
 - [ ] 是否避免为了排序添加 `01-`、`02-` 等机器目录前缀？
-- [ ] 是否已同步根 README 和本索引？
+- [ ] 是否已同步对应分类 README 和根 README？
 - [ ] 是否存在跨目录链接需要更新？
 
 ## 质量检查
 
 - [ ] 任务是否只有一个主要目标？
 - [ ] 输入变量是否明确？
-- [ ] 是否区分事实、假设和无法确认信息？
+- [ ] 是否区分事实、假设和无法确认的信息？
 - [ ] 输出是否可直接使用？
-- [ ] 是否包含无效输入/不确定性处理？
+- [ ] 是否包含无效输入或不确定性处理？
 - [ ] 生图任务是否锁定主体、构图和可变项？
 - [ ] 是否与已有 Prompt 重复？
 - [ ] 是否其实已经需要真实执行闭环，应该升级为 Skill？
+
+## 返回上级
+
+[返回仓库首页](../../README.md)
