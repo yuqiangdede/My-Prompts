@@ -16,7 +16,7 @@
 - 执行测试、构建、启动或其他验证。
 - 依赖 scripts / references / assets。
 
-如果内部虽然有 5～10 个步骤，但可以在一次模型上下文中完成，最终主要输出仍是文本、Prompt、JSON、表格或分析报告，则优先放 `prompts/`。
+如果内部虽然有 5～10 个步骤，但可以在一次模型上下文中完成，最终主要输出仍是文本、Prompt、JSON、表格或分析报告，则优先放 `提示词/prompts/<中文分类>/<英文机器目录>/`。
 
 典型 Prompt：
 
@@ -45,8 +45,9 @@ description: 当……时使用。负责……；不用于……，相邻任务�
 
 要求：
 
-- `name` 必须与 Skill 所在目录名一致。
+- `name` 必须与 Skill 所在**英文叶子目录名**一致。
 - `name` 使用英文 `kebab-case`。
+- 中文分类目录不进入 `name`。
 - `description` 是 Codex 自动发现的主要触发信息。
 - description 不应该只是能力广告，而应明确路由边界。
 
@@ -83,7 +84,7 @@ description: 当……时使用。负责……；不用于……，相邻任务�
 至少写出最容易混淆的相邻 Skill / Prompt：
 
 ```text
-如果只是生成一份给其他 Codex 的任务书，使用 prompts/software-development/codex-task-brief.md；本 Skill 负责当前仓库的真实修改和验证。
+如果只是生成一份给其他 Codex 的任务书，使用 提示词/prompts/软件开发/software-development/codex-task-brief.md；本 Skill 负责当前仓库的真实修改和验证。
 ```
 
 ## 4. 推荐句式
@@ -133,7 +134,7 @@ requirement-review
 ### 软件开发
 
 ```text
-prompts/software-development/codex-task-brief.md
+提示词/prompts/软件开发/software-development/codex-task-brief.md
   → 只生成给“另一个 Codex”的任务书
 
 java-project-architecture-analysis
@@ -162,10 +163,10 @@ python-vision-project-reproduction
 ### 图像与视频
 
 ```text
-prompts/image-generation/general/image-prompt-design.md
+提示词/prompts/图像生成/image-generation/general/image-prompt-design.md
   → 普通单张/独立图片提示词
 
-prompts/video-generation/storyboard-design.md
+提示词/prompts/视频生成/video-generation/storyboard-design.md
   → 一次性通用视频分镜
 
 layered-shot-narrative
@@ -178,10 +179,10 @@ panorama-generation
 ### 写作与汇报
 
 ```text
-prompts/writing/structured-longform-writing.md
+提示词/prompts/内容写作/writing/structured-longform-writing.md
   → 一次性长文
 
-prompts/technical-communication/
+提示词/prompts/技术汇报/technical-communication/
   → 已有技术方案转 PPT/视频分镜脚本
 ```
 
@@ -189,7 +190,7 @@ prompts/technical-communication/
 
 ## 7. Router 不属于业务 Skill
 
-`workflow-router` 已放到 `agents/`。
+`workflow-router` 位于 `智能体/agents/工作流编排/workflow-router/`。
 
 原因：Router 的职责是选择 Prompt / Skill / Agent，它是裁判，不应作为一个候选业务 Skill 与被路由对象一起参与自动触发。
 
@@ -199,7 +200,8 @@ prompts/technical-communication/
 
 - “万能”描述，什么任务都能处理。
 - 只列功能，不写触发条件。
-- `name` 与目录名不同。
+- `name` 与英文叶子目录名不同。
+- 把中文分类层写进 `name`。
 - 把完整方法论塞进 description。
 - 使用大量形容词但没有边界。
 - 同时声称负责需求、方案、PRD、原型、开发，除非明确是总控编排器。
@@ -231,10 +233,11 @@ prompts/technical-communication/
 ### 如果确定是 Skill
 
 - [ ] 文件首部存在 YAML frontmatter。
-- [ ] `name` 与目录名完全一致。
+- [ ] `name` 与英文叶子目录名完全一致。
 - [ ] `description` 写清触发条件。
 - [ ] `description` 写清核心职责。
 - [ ] 指出最容易混淆的非目标或相邻入口。
 - [ ] 没有和现有 Skill 大范围抢同一类任务。
 - [ ] 总控与专项 Skill 的优先级明确。
 - [ ] 正文规则与 frontmatter 没有冲突。
+- [ ] description 中引用的 Prompt / Agent 路径是当前包含中文分类层的真实路径。
