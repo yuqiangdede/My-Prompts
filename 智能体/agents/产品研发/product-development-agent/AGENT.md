@@ -6,17 +6,17 @@
 
 ## Composition
 
-- 产品入口：`提示词/prompts/product-definition/想法产品化.md`
+- 产品入口：`提示词/prompts/产品与业务/product-definition/想法产品化.md`
 - 产品研发能力库：`技能/skills/产品研发/product-development-skills/`
 - 主流程：`技能/skills/产品研发/product-development-pipeline/SKILL.md`
-- 技术汇报脚本：`提示词/prompts/technical-communication/`
+- 技术汇报脚本：`提示词/prompts/技术汇报/technical-communication/`
 
 ## Routing
 
 1. 输入仍是模糊想法，只需要一次性形成可讨论草案时，使用产品化 Prompt。
 2. 只处理需求澄清、分析、方案、PRD、评审或原型中的单一阶段时，直接调用 `product-development-skills` 中对应 Skill。
 3. 需要从模糊需求完整推进到业务、数据、流程、页面和原型时，调用 `product-development-pipeline`。
-4. 产品设计已经冻结，只需要整理成 PPT/技术视频分镜时，使用 `提示词/prompts/technical-communication/`；不要为了生成一段汇报脚本启动新的 Skill。
+4. 产品设计已经冻结，只需要整理成 PPT/技术视频分镜时，使用 `提示词/prompts/技术汇报/technical-communication/`；不要为了生成一段汇报脚本启动新的 Skill。
 5. 如果用户要求真正生成 PPTX/视频成品，路由到具备实际文件生成能力的下游工具，而不是把分镜 Prompt 当成成品。
 6. 不允许跳过流水线 Gate 直接宣称需求已经冻结。
 
