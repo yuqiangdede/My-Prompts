@@ -20,7 +20,7 @@
 
 - [`software-development/codex-task-brief.md`](software-development/codex-task-brief.md)：把开发需求整理成可复制给**另一个** Codex/编码 Agent 的完整任务书。
 
-如果当前 Codex 要直接修改仓库并运行验证，使用 `技能/skills/software-development/codex-task-execution`。
+如果当前 Codex 要直接修改仓库并运行验证，使用 `技能/skills/软件开发/software-development/codex-task-execution`。
 
 ## 写作
 
@@ -77,7 +77,7 @@
 
 - [`image-generation/style-transfer/`](image-generation/style-transfer/)：调色、LUT、油画、老照片等。
 
-360° 全景已经升级为需要文件生成与查看器验证的 Skill：[`技能/skills/panorama-generation`](../../技能/skills/panorama-generation/README.md)。
+360° 全景已经升级为需要文件生成与查看器验证的 Skill：[`技能/skills/图像与视觉/panorama-generation`](../../技能/skills/图像与视觉/panorama-generation/README.md)。
 
 ## 新增 Prompt 判断标准
 
