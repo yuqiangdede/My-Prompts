@@ -7,8 +7,8 @@
 ## Composition
 
 - 产品入口：`提示词/prompts/product-definition/想法产品化.md`
-- 产品研发能力库：`技能/skills/product-development-skills/`
-- 主流程：`技能/skills/product-development-pipeline/SKILL.md`
+- 产品研发能力库：`技能/skills/产品研发/product-development-skills/`
+- 主流程：`技能/skills/产品研发/product-development-pipeline/SKILL.md`
 - 技术汇报脚本：`提示词/prompts/technical-communication/`
 
 ## Routing
