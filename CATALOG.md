@@ -8,7 +8,7 @@
 
 <a id="prompt"></a>
 
-## Prompt（31）
+## Prompt（34）
 
 ### 安全合规
 
@@ -81,10 +81,13 @@
 | [古埃及双重曝光旅行海报](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/image-generation/character-portrait/egypt-travel-poster.md) | 适用场景：生成 3:4 竖版、暖白留白、人物剪影嵌套古埃及黄昏景观的电影感旅行海报。 |
 | [人物关系图海报](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/image-generation/character-reference/01%20%E4%BA%BA%E7%89%A9%E5%9B%BE%E8%B0%B1.md) | 根据用户提供的角色资料，生成兼具人物关系表达、阵营结构和海报设计感的人物图谱。 |
 | [图像提示词设计](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/image-generation/general/image-prompt-design.md) | 把模糊的单张或独立图像想法转化为结构稳定、可迭代、可复用的生图指令。适用于写实摄影、电影剧照、UI 概念图、产品图、插画和信息图。 |
+| [东方意境海报](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/image-generation/general/oriental-cultural-poster.md) | 适用场景：以大色域、微场景、纸本拼贴和水彩材质，生成现代东方编辑美学的文化活动海报。 |
 | [参考图片调色分析](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/image-generation/style-transfer/01%20%E5%8F%82%E8%80%83%E5%9B%BE%E7%89%87%E8%B0%83%E8%89%B2.md) | 从参考图片中提取可用于人工调色的视觉结构。适合快速分析风格方向，不把视觉模型的估算伪装成真实像素统计。 |
 | [参考图 LUT 重建方案](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/image-generation/style-transfer/02%20%E5%8F%82%E8%80%83%E5%9B%BE%E7%89%87%E8%B0%83%E8%89%B2.md) | 把参考图片的色彩特征整理成 DaVinci Resolve 或其他调色软件可执行的节点与曲线方案。输出的是重建建议，不伪装成已经生成的 .cube 文件。 |
 | [参考图油画风格转换](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/image-generation/style-transfer/03%20%E5%A4%8D%E5%88%BB%E6%B2%B9%E7%94%BB.md) | 把照片或场景转换为具有真实油画材料特征的作品，同时保留原图主体、构图和身份，不直接模仿某位在世艺术家的独特风格。 |
 | [老照片质感转换](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/image-generation/style-transfer/04%20%E5%A4%8D%E5%88%BB%E8%80%81%E7%85%A7%E7%89%87.md) | 把现代照片转换为指定年代和介质的老照片效果，或分析参考老照片的退化特征，用于生图、修图和算法参数设计。 |
+| [摄影与点刻套印对照海报](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/image-generation/style-transfer/photo-stipple-overprint-poster.md) | 适用场景：将上传照片分别制作成 3:4 竖版海报，上半部分保留摄影，下半部分以点刻插画和单色透明套印重构主体。 |
+| [复古旅行水彩照片](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/image-generation/style-transfer/vintage-travel-watercolor-photo.md) | 适用场景：保留原照片主体、场景关系与拍摄视角，将旅行照片转绘为清透、柔和、具有收藏感的复古水彩画面。 |
 
 <a id="skill"></a>
 

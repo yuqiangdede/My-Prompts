@@ -11,6 +11,7 @@
 | Prompt | 说明 |
 | --- | --- |
 | [`image-prompt-design.md`](image-prompt-design.md) | 将模糊画面想法整理成结构化生图提示词 |
+| [东方意境海报](oriental-cultural-poster.md) | 大色域与微场景构图，融合纸本拼贴、水彩材质和东方编辑排版 |
 
 ## 边界
 
