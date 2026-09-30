@@ -13,7 +13,7 @@
 | [`image-generation/general/`](image-generation/general/) | 通用单张图像提示词设计 |
 | [`image-generation/architecture/`](image-generation/architecture/) | 建筑视觉与技术分析图 |
 | [`image-generation/character-reference/`](image-generation/character-reference/) | 人物参考、人物关系和图谱 |
-| [`image-generation/character-portrait/`](image-generation/character-portrait/) | 人物肖像、职业照、写真、海报、发型等 |
+| [`image-generation/character-portrait/`](image-generation/character-portrait/) | 人物肖像、职业照、写真、海报、发型等；含[古埃及双重曝光旅行海报](image-generation/character-portrait/egypt-travel-poster.md) |
 | [`image-generation/style-transfer/`](image-generation/style-transfer/) | 调色、油画、老照片等风格转换 |
 
 ## 边界

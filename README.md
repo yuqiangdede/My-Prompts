@@ -2,6 +2,21 @@
 
 个人 AI Workflow Library，用于集中管理 **Prompt、Skill、Agent 与项目级规则**。
 
+## 快速查找
+
+- **[内容总目录](CATALOG.md)**：直接查看每条 Prompt、Skill 和 Agent 的名称、用途与文件入口。
+- **[搜索导航页](catalog.html)**：下载仓库后用浏览器打开，可按关键词、类型和分类筛选，无需启动服务。
+- 按类型浏览：[Prompt](提示词/prompts/README.md) · [Skill](技能/skills/README.md) · [Agent](智能体/agents/README.md)。
+- 历史内容单独查看：[需求设计实现原始稿](技能/skills/需求%20设计%20实现/README.md)。
+
+新增或修改内容后刷新总目录与搜索页：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\update-catalog.ps1
+```
+
+文件正文是内容的权威来源；总目录与搜索页从真实文件生成，分类 README 提供选择说明。
+
 本仓库的目标不是堆积尽可能多的提示词，而是让不同类型的 AI 能力有清楚边界、稳定目录和统一导航。
 
 ## 1. 仓库定位
@@ -61,7 +76,7 @@ My-Prompts/
 
 完整索引：[`提示词/prompts/README.md`](提示词/prompts/README.md)
 
-当前分类：产品与业务、思考与决策、软件开发、内容写作、技术汇报、视频生成、视觉理解、安全合规、地理空间、图像生成。
+当前分类：产品与业务、软件开发、内容写作、技术汇报、视频生成、视觉理解、安全合规、地理空间、图像生成。
 
 ### Skill
 
