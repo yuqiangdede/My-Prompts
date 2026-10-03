@@ -46,23 +46,23 @@ scripts/
 ```text
 提示词/prompts/
 ├── 产品与业务/
-│   └── product-definition/
+│   └── 产品定义/
 ├── 软件开发/
-│   └── software-development/
+│   └── 软件开发/
 ├── 内容写作/
-│   └── writing/
+│   └── 写作/
 ├── 技术汇报/
-│   └── technical-communication/
+│   └── 技术沟通/
 ├── 视频生成/
-│   └── video-generation/
+│   └── 视频生成/
 ├── 视觉理解/
-│   └── vision-multimodal-understanding/
+│   └── 视觉与多模态理解/
 ├── 安全合规/
-│   └── safety-compliance-risk/
+│   └── 安全合规与风险/
 ├── 地理空间/
-│   └── geospatial-intelligence/
+│   └── 地理空间智能/
 └── 图像生成/
-    └── image-generation/
+    └── 图像生成/
 ```
 
 ### 2.2 Skill 当前分类
@@ -73,7 +73,7 @@ scripts/
 │   ├── product-development-pipeline/
 │   └── product-development-skills/
 ├── 软件开发/
-│   └── software-development/
+│   └── 软件开发/
 ├── 研究与复现/
 │   └── research-analysis/
 ├── 图像与视觉/
@@ -103,9 +103,9 @@ scripts/
 真实 Prompt、Skill、Agent 能力目录继续使用英文 `kebab-case`：
 
 ```text
-product-definition
+产品定义
 software-development
-technical-communication
+技术沟通
 product-development-pipeline
 java-project-architecture-analysis
 panorama-generation
@@ -120,11 +120,11 @@ workflow-router
 Prompt 的机器目录下面可以继续存在更细的英文子分类，例如：
 
 ```text
-image-generation/general/
-image-generation/architecture/
-image-generation/character-reference/
-image-generation/character-portrait/
-image-generation/style-transfer/
+图像生成/通用/
+图像生成/建筑/
+图像生成/人物图谱/
+图像生成/人物肖像/
+图像生成/风格转换/
 ```
 
 ## 4. Prompt / Skill / Agent 名称
@@ -134,13 +134,13 @@ image-generation/style-transfer/
 使用领域或输出类型：
 
 ```text
-product-definition/
-software-development/
-writing/
-technical-communication/
-video-generation/
-geospatial-intelligence/
-image-generation/
+产品定义/
+软件开发/
+写作/
+技术沟通/
+视频生成/
+地理空间智能/
+图像生成/
 ```
 
 ### Skill 目录
@@ -204,7 +204,7 @@ Codex 安装目录：.codex/skills/panorama-generation/
 又如：
 
 ```text
-仓库路径：技能/skills/软件开发/software-development/codex-task-execution/
+仓库路径：技能/skills/软件开发/软件开发/codex-task-execution/
 SKILL name：codex-task-execution
 Codex 安装目录：.codex/skills/codex-task-execution/
 ```
@@ -220,12 +220,12 @@ Prompt 与 Agent 同样保留英文机器目录名，但不使用 Skill 的安�
 例如：
 
 ```text
-提示词/prompts/产品与业务/product-definition/想法产品化.md
-提示词/prompts/软件开发/software-development/codex-task-brief.md
-提示词/prompts/图像生成/image-generation/general/image-prompt-design.md
-提示词/prompts/技术汇报/technical-communication/technical-to-ppt-storyboard.md
+提示词/prompts/产品与业务/产品定义/想法产品化.md
+提示词/prompts/软件开发/软件开发/Codex任务书.md
+提示词/prompts/图像生成/图像生成/通用/图像提示词设计.md
+提示词/prompts/技术汇报/技术沟通/技术方案转PPT分镜.md
 技能/skills/产品研发/product-development-skills/requirement-analysis/SKILL.md
-技能/skills/软件开发/software-development/codex-task-execution/SKILL.md
+技能/skills/软件开发/软件开发/codex-task-execution/SKILL.md
 技能/skills/图像与视觉/panorama-generation/SKILL.md
 智能体/agents/工作流编排/workflow-router/AGENT.md
 智能体/agents/产品研发/product-development-agent/AGENT.md
@@ -255,10 +255,10 @@ Prompt 与 Agent 同样保留英文机器目录名，但不使用 Skill 的安�
 中文分类层增加后，以下旧直达路径也不应继续作为当前文档链接：
 
 ```text
-提示词/prompts/image-generation/
-提示词/prompts/software-development/
+提示词/prompts/图像生成/
+提示词/prompts/软件开发/
 技能/skills/panorama-generation/
-技能/skills/software-development/
+技能/skills/软件开发/
 智能体/agents/workflow-router/
 智能体/agents/product-development-agent/
 ```

@@ -8,86 +8,88 @@
 
 <a id="prompt"></a>
 
-## Prompt（34）
+## Prompt（36）
 
 ### 安全合规
 
 | 名称 | 用途 |
 | --- | --- |
-| [图片隐私风险分析](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E5%AE%89%E5%85%A8%E5%90%88%E8%A7%84/safety-compliance-risk/%E5%9B%BE%E7%89%87%E9%9A%90%E7%A7%81%E9%A3%8E%E9%99%A9%E5%88%86%E6%9E%90.md) | 识别图片中可能泄露个人信息、位置、账号凭证、商业机密或物理安全信息的可见要素，并给出发布前处理建议。 |
+| [图片隐私风险分析](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E5%AE%89%E5%85%A8%E5%90%88%E8%A7%84/%E5%AE%89%E5%85%A8%E5%90%88%E8%A7%84%E4%B8%8E%E9%A3%8E%E9%99%A9/%E5%9B%BE%E7%89%87%E9%9A%90%E7%A7%81%E9%A3%8E%E9%99%A9%E5%88%86%E6%9E%90.md) | 识别图片中可能泄露个人信息、位置、账号凭证、商业机密或物理安全信息的可见要素，并给出发布前处理建议。 |
 
 ### 产品与业务
 
 | 名称 | 用途 |
 | --- | --- |
-| [想法产品化](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E4%BA%A7%E5%93%81%E4%B8%8E%E4%B8%9A%E5%8A%A1/product-definition/%E6%83%B3%E6%B3%95%E4%BA%A7%E5%93%81%E5%8C%96.md) | 把一个模糊想法一次性整理成可讨论、可评审、可进入 MVP 设计的产品方案。适用于软件产品、内部系统、AI 工具和行业应用。 |
+| [想法产品化](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E4%BA%A7%E5%93%81%E4%B8%8E%E4%B8%9A%E5%8A%A1/%E4%BA%A7%E5%93%81%E5%AE%9A%E4%B9%89/%E6%83%B3%E6%B3%95%E4%BA%A7%E5%93%81%E5%8C%96.md) | 把一个模糊想法一次性整理成可讨论、可评审、可进入 MVP 设计的产品方案。适用于软件产品、内部系统、AI 工具和行业应用。 |
 
 ### 地理空间
 
 | 名称 | 用途 |
 | --- | --- |
-| [图片地理位置分析](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E5%9C%B0%E7%90%86%E7%A9%BA%E9%97%B4/geospatial-intelligence/%E5%9B%BE%E7%89%87%E5%9C%B0%E7%90%86%E4%BD%8D%E7%BD%AE%E5%88%86%E6%9E%90.md) | 根据街景、建筑、道路、文字、自然环境和公共设施等可见证据，对图片拍摄区域进行分层定位，并明确候选地点、反证和置信度。 |
+| [图片地理位置分析](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E5%9C%B0%E7%90%86%E7%A9%BA%E9%97%B4/%E5%9C%B0%E7%90%86%E7%A9%BA%E9%97%B4%E6%99%BA%E8%83%BD/%E5%9B%BE%E7%89%87%E5%9C%B0%E7%90%86%E4%BD%8D%E7%BD%AE%E5%88%86%E6%9E%90.md) | 根据街景、建筑、道路、文字、自然环境和公共设施等可见证据，对图片拍摄区域进行分层定位，并明确候选地点、反证和置信度。 |
 
 ### 技术汇报
 
 | 名称 | 用途 |
 | --- | --- |
-| [技术方案 → PPT 分镜脚本](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E6%8A%80%E6%9C%AF%E6%B1%87%E6%8A%A5/technical-communication/technical-to-ppt-storyboard.md) | 你是一个资深技术方案 PPT 策划专家，擅长把复杂后端架构、数据流、数据库设计、业务流程，转化为适合汇报的 PPT 分镜脚本。 |
-| [技术方案 → 视频分镜脚本](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E6%8A%80%E6%9C%AF%E6%B1%87%E6%8A%A5/technical-communication/technical-to-video-storyboard.md) | 你是一个“技术方案视频分镜脚本导演 + 架构可视化设计师”。 |
+| [技术方案 → PPT 分镜脚本](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E6%8A%80%E6%9C%AF%E6%B1%87%E6%8A%A5/%E6%8A%80%E6%9C%AF%E6%B2%9F%E9%80%9A/%E6%8A%80%E6%9C%AF%E6%96%B9%E6%A1%88%E8%BD%ACPPT%E5%88%86%E9%95%9C.md) | 你是一个资深技术方案 PPT 策划专家，擅长把复杂后端架构、数据流、数据库设计、业务流程，转化为适合汇报的 PPT 分镜脚本。 |
+| [技术方案 → 视频分镜脚本](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E6%8A%80%E6%9C%AF%E6%B1%87%E6%8A%A5/%E6%8A%80%E6%9C%AF%E6%B2%9F%E9%80%9A/%E6%8A%80%E6%9C%AF%E6%96%B9%E6%A1%88%E8%BD%AC%E8%A7%86%E9%A2%91%E5%88%86%E9%95%9C.md) | 你是一个“技术方案视频分镜脚本导演 + 架构可视化设计师”。 |
+| [AIS_ClickHouse_PPT分镜示例](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E6%8A%80%E6%9C%AF%E6%B1%87%E6%8A%A5/%E6%8A%80%E6%9C%AF%E6%B2%9F%E9%80%9A/%E7%A4%BA%E4%BE%8B/AIS_ClickHouse_PPT%E5%88%86%E9%95%9C%E7%A4%BA%E4%BE%8B.md) | 文件名：ppt_storyboard_prompt.md |
+| [一、目标](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E6%8A%80%E6%9C%AF%E6%B1%87%E6%8A%A5/%E6%8A%80%E6%9C%AF%E6%B2%9F%E9%80%9A/%E7%A4%BA%E4%BE%8B/AIS_ClickHouse%E8%A7%86%E9%A2%91%E5%88%86%E9%95%9C%E7%A4%BA%E4%BE%8B.md) | 你是一个“技术方案视频分镜脚本导演 + 架构可视化设计师”。 |
 
 ### 内容写作
 
 | 名称 | 用途 |
 | --- | --- |
-| [结构化长文写作](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E5%86%85%E5%AE%B9%E5%86%99%E4%BD%9C/writing/structured-longform-writing.md) | 将资料、观点和目标一次性转化为结构清晰、事实边界明确、适合特定读者的长文。 |
+| [结构化长文写作](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E5%86%85%E5%AE%B9%E5%86%99%E4%BD%9C/%E5%86%99%E4%BD%9C/%E7%BB%93%E6%9E%84%E5%8C%96%E9%95%BF%E6%96%87%E5%86%99%E4%BD%9C.md) | 将资料、观点和目标一次性转化为结构清晰、事实边界明确、适合特定读者的长文。 |
 
 ### 软件开发
 
 | 名称 | 用途 |
 | --- | --- |
-| [Codex 任务书生成](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/software-development/codex-task-brief.md) | 把自然语言开发需求一次性整理成可以复制给另一个 Codex / 编码 Agent 的完整任务书。本 Prompt 只负责写任务说明，不在当前仓库执行修改。 |
+| [Codex 任务书生成](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/Codex%E4%BB%BB%E5%8A%A1%E4%B9%A6.md) | 把自然语言开发需求一次性整理成可以复制给另一个 Codex / 编码 Agent 的完整任务书。本 Prompt 只负责写任务说明，不在当前仓库执行修改。 |
 
 ### 视觉理解
 
 | 名称 | 用途 |
 | --- | --- |
-| [图片标签](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E8%A7%86%E8%A7%89%E7%90%86%E8%A7%A3/vision-multimodal-understanding/%E5%9B%BE%E7%89%87%E6%A0%87%E7%AD%BE.md) | 为城市街景、园区、道路或监控画面生成稳定、可检索的场景标签。默认输出 5 个标签；无效画面不强行凑数。 |
+| [图片标签](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E8%A7%86%E8%A7%89%E7%90%86%E8%A7%A3/%E8%A7%86%E8%A7%89%E4%B8%8E%E5%A4%9A%E6%A8%A1%E6%80%81%E7%90%86%E8%A7%A3/%E5%9B%BE%E7%89%87%E6%A0%87%E7%AD%BE.md) | 为城市街景、园区、道路或监控画面生成稳定、可检索的场景标签。默认输出 5 个标签；无效画面不强行凑数。 |
 
 ### 视频生成
 
 | 名称 | 用途 |
 | --- | --- |
-| [视频分镜设计](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E8%A7%86%E9%A2%91%E7%94%9F%E6%88%90/video-generation/storyboard-design.md) | 将主题、脚本、产品演示或业务流程一次性转换为可生成、可剪辑、具备镜头连续性的视频分镜与单镜头提示词。 |
+| [视频分镜设计](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E8%A7%86%E9%A2%91%E7%94%9F%E6%88%90/%E8%A7%86%E9%A2%91%E7%94%9F%E6%88%90/%E8%A7%86%E9%A2%91%E5%88%86%E9%95%9C%E8%AE%BE%E8%AE%A1.md) | 将主题、脚本、产品演示或业务流程一次性转换为可生成、可剪辑、具备镜头连续性的视频分镜与单镜头提示词。 |
 
 ### 图像生成
 
 | 名称 | 用途 |
 | --- | --- |
-| [建筑技术分析海报](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/image-generation/architecture/01%20%E5%BB%BA%E7%AD%91%E5%88%86%E6%9E%90.md) | 将建筑参考图或建筑概念转成“真实建筑摄影 + 技术分析叠加”的信息海报，适合方案汇报、概念展示和社交媒体图卡。 |
-| [职业照转换](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/image-generation/character-portrait/01%20%E8%81%8C%E4%B8%9A%E7%85%A7%E8%BD%AC%E6%8D%A2.md) | 把成年人的参考照片转换为自然、可信的专业职业半身照，保留人物身份，不做过度磨皮或面部重塑。 |
-| [高级商业时尚肖像](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/image-generation/character-portrait/02%20%E6%97%B6%E5%B0%9A%E7%85%A7%E7%89%87.md) | 基于成年女性参考图生成简洁、高级、可控的商业时尚写真，重点保持人物身份、姿态逻辑和真实摄影质感。 |
-| [美术馆黑白纪实肖像](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/image-generation/character-portrait/03%20%E7%BE%8E%E6%9C%AF%E9%A6%86%E8%82%96%E5%83%8F.md) | 基于成年人物参考图，生成现代美术馆中的高反差黑白纪实肖像，利用静止主体与移动人群形成视觉对比。 |
-| [艺术黑白肖像组](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/image-generation/character-portrait/04%20%E8%89%BA%E6%9C%AF%E9%BB%91%E7%99%BD%E7%85%A7%E7%89%87.md) | 基于成年人物参考图生成 4 张身份一致、姿态不同的编辑类黑白肖像。 |
-| [复古时尚杂志封面肖像](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/image-generation/character-portrait/05%20%E6%9D%82%E5%BF%97%E5%B0%81%E9%9D%A2.md) | 基于成年女性参考图生成 3 张身份一致、姿态不同的复古时尚编辑照片，并预留杂志封面排版空间。 |
-| [几何光影电影肖像](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/image-generation/character-portrait/06%20%E7%94%B5%E5%BD%B1%E8%82%96%E5%83%8F.md) | 基于成年女性参考图生成暗色室内、几何彩光和高级编辑造型的电影感肖像。 |
-| [男士时尚九宫格肖像](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/image-generation/character-portrait/07%20%E6%B5%B7%E9%A9%AC%E4%BD%93%E4%B9%9D%E5%AE%AB%E6%A0%BC.md) | 基于成年男性参考图生成 3×3 时尚肖像拼贴，保持同一身份，同时展示不同表情、机位和有限度造型变化。 |
-| [双层侧脸背景肖像海报](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/image-generation/character-portrait/08%20%E5%90%8C%E4%B8%80%E5%BC%A0%E8%84%B8%E7%9A%84%E6%9F%94%E5%92%8C%E6%A8%A1%E7%B3%8A%E7%9A%84%E4%BE%A7%E9%9D%A2%E7%89%B9%E5%86%99.md) | 基于成年人物参考图，生成“前景全身人物 + 背景同一张脸的大幅柔焦侧脸”的双层编辑海报。 |
-| [雨夜霓虹电影人物照](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/image-generation/character-portrait/09%20%E4%BA%BA%E7%89%A9%E7%9A%84%E7%94%B5%E5%BD%B1%E7%BA%A7%E9%80%BC%E7%9C%9F%E5%9B%BE%E5%83%8F.md) | 基于成年人物参考图，生成雨后城市高架或街边座椅场景中的写实电影人物照。 |
-| [雪天校园多角度写真海报](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/image-generation/character-portrait/10%20%E5%A4%9A%E8%A7%92%E5%BA%A6%E7%89%B9%E5%86%99%E7%9A%84%E5%86%99%E7%9C%9F%E6%B5%B7%E6%8A%A5%E5%9B%BE.md) | 生成一组发生在大学校园操场的清新雪景情侣写真。主体必须明确为成年人，画面保持自然、克制和非性化。 |
-| [职业篮球看台转播抓拍](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/image-generation/character-portrait/11%20%E4%BD%93%E8%82%B2%E7%9C%8B%E5%8F%B0.md) | 基于成年人物参考图，生成职业篮球比赛看台上的真实体育电视转播抓拍画面，不使用真实电视台台标或伪造直播信息。 |
-| [人物发型分析与探索图卡](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/image-generation/character-portrait/12%20%E5%8F%91%E5%9E%8B.md) | 根据成年人物参考图生成身份一致、差异明确的发型方案对比图，适合日常造型、职业形象和角色设计探索。 |
-| [公司主题收藏级史诗叙事海报](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/image-generation/character-portrait/13%20%E5%85%AC%E5%8F%B8%E4%B8%BB%E9%A2%98%E6%94%B6%E8%97%8F%E7%BA%A7%E5%8F%B2%E8%AF%97%E5%8F%99%E4%BA%8B%E6%B5%B7%E6%8A%A5.md) | 根据上传的人物肖像，生成以人物巨大侧脸剪影为外轮廓、将公司世界观填充在剪影内部的收藏级电影海报。适合品牌叙事、企业愿景、创始人肖像或公司主题视觉概念图。 |
-| [物体主题收藏级史诗叙事海报](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/image-generation/character-portrait/14%20%E7%89%A9%E4%BD%93%E4%B8%BB%E9%A2%98%E6%94%B6%E8%97%8F%E7%BA%A7%E5%8F%B2%E8%AF%97%E5%8F%99%E4%BA%8B%E6%B5%B7%E6%8A%A5.md) | 生成以指定物体的巨大剪影作为外轮廓或背景、将公司世界观填充在剪影内部的收藏级史诗叙事海报。画面不使用真实人物肖像，适合品牌叙事、企业愿景和公司主题视觉概念图。 |
-| [古埃及双重曝光旅行海报](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/image-generation/character-portrait/egypt-travel-poster.md) | 适用场景：生成 3:4 竖版、暖白留白、人物剪影嵌套古埃及黄昏景观的电影感旅行海报。 |
-| [人物关系图海报](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/image-generation/character-reference/01%20%E4%BA%BA%E7%89%A9%E5%9B%BE%E8%B0%B1.md) | 根据用户提供的角色资料，生成兼具人物关系表达、阵营结构和海报设计感的人物图谱。 |
-| [图像提示词设计](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/image-generation/general/image-prompt-design.md) | 把模糊的单张或独立图像想法转化为结构稳定、可迭代、可复用的生图指令。适用于写实摄影、电影剧照、UI 概念图、产品图、插画和信息图。 |
-| [东方意境海报](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/image-generation/general/oriental-cultural-poster.md) | 适用场景：以大色域、微场景、纸本拼贴和水彩材质，生成现代东方编辑美学的文化活动海报。 |
-| [参考图片调色分析](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/image-generation/style-transfer/01%20%E5%8F%82%E8%80%83%E5%9B%BE%E7%89%87%E8%B0%83%E8%89%B2.md) | 从参考图片中提取可用于人工调色的视觉结构。适合快速分析风格方向，不把视觉模型的估算伪装成真实像素统计。 |
-| [参考图 LUT 重建方案](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/image-generation/style-transfer/02%20%E5%8F%82%E8%80%83%E5%9B%BE%E7%89%87%E8%B0%83%E8%89%B2.md) | 把参考图片的色彩特征整理成 DaVinci Resolve 或其他调色软件可执行的节点与曲线方案。输出的是重建建议，不伪装成已经生成的 .cube 文件。 |
-| [参考图油画风格转换](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/image-generation/style-transfer/03%20%E5%A4%8D%E5%88%BB%E6%B2%B9%E7%94%BB.md) | 把照片或场景转换为具有真实油画材料特征的作品，同时保留原图主体、构图和身份，不直接模仿某位在世艺术家的独特风格。 |
-| [老照片质感转换](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/image-generation/style-transfer/04%20%E5%A4%8D%E5%88%BB%E8%80%81%E7%85%A7%E7%89%87.md) | 把现代照片转换为指定年代和介质的老照片效果，或分析参考老照片的退化特征，用于生图、修图和算法参数设计。 |
-| [摄影与点刻套印对照海报](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/image-generation/style-transfer/photo-stipple-overprint-poster.md) | 适用场景：将上传照片分别制作成 3:4 竖版海报，上半部分保留摄影，下半部分以点刻插画和单色透明套印重构主体。 |
-| [复古旅行水彩照片](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/image-generation/style-transfer/vintage-travel-watercolor-photo.md) | 适用场景：保留原照片主体、场景关系与拍摄视角，将旅行照片转绘为清透、柔和、具有收藏感的复古水彩画面。 |
+| [参考图片调色分析](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/%E9%A3%8E%E6%A0%BC%E8%BD%AC%E6%8D%A2/01%20%E5%8F%82%E8%80%83%E5%9B%BE%E7%89%87%E8%B0%83%E8%89%B2.md) | 从参考图片中提取可用于人工调色的视觉结构。适合快速分析风格方向，不把视觉模型的估算伪装成真实像素统计。 |
+| [参考图 LUT 重建方案](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/%E9%A3%8E%E6%A0%BC%E8%BD%AC%E6%8D%A2/02%20%E5%8F%82%E8%80%83%E5%9B%BE%E7%89%87%E8%B0%83%E8%89%B2.md) | 把参考图片的色彩特征整理成 DaVinci Resolve 或其他调色软件可执行的节点与曲线方案。输出的是重建建议，不伪装成已经生成的 .cube 文件。 |
+| [参考图油画风格转换](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/%E9%A3%8E%E6%A0%BC%E8%BD%AC%E6%8D%A2/03%20%E5%A4%8D%E5%88%BB%E6%B2%B9%E7%94%BB.md) | 把照片或场景转换为具有真实油画材料特征的作品，同时保留原图主体、构图和身份，不直接模仿某位在世艺术家的独特风格。 |
+| [老照片质感转换](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/%E9%A3%8E%E6%A0%BC%E8%BD%AC%E6%8D%A2/04%20%E5%A4%8D%E5%88%BB%E8%80%81%E7%85%A7%E7%89%87.md) | 把现代照片转换为指定年代和介质的老照片效果，或分析参考老照片的退化特征，用于生图、修图和算法参数设计。 |
+| [复古旅行水彩照片](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/%E9%A3%8E%E6%A0%BC%E8%BD%AC%E6%8D%A2/%E5%A4%8D%E5%8F%A4%E6%97%85%E8%A1%8C%E6%B0%B4%E5%BD%A9%E7%85%A7%E7%89%87.md) | 适用场景：保留原照片主体、场景关系与拍摄视角，将旅行照片转绘为清透、柔和、具有收藏感的复古水彩画面。 |
+| [摄影与点刻套印对照海报](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/%E9%A3%8E%E6%A0%BC%E8%BD%AC%E6%8D%A2/%E6%91%84%E5%BD%B1%E7%82%B9%E5%88%BB%E5%A5%97%E5%8D%B0%E6%B5%B7%E6%8A%A5.md) | 适用场景：将上传照片分别制作成 3:4 竖版海报，上半部分保留摄影，下半部分以点刻插画和单色透明套印重构主体。 |
+| [建筑技术分析海报](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/%E5%BB%BA%E7%AD%91/01%20%E5%BB%BA%E7%AD%91%E5%88%86%E6%9E%90.md) | 将建筑参考图或建筑概念转成“真实建筑摄影 + 技术分析叠加”的信息海报，适合方案汇报、概念展示和社交媒体图卡。 |
+| [人物关系图海报](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/%E4%BA%BA%E7%89%A9%E5%9B%BE%E8%B0%B1/01%20%E4%BA%BA%E7%89%A9%E5%9B%BE%E8%B0%B1.md) | 根据用户提供的角色资料，生成兼具人物关系表达、阵营结构和海报设计感的人物图谱。 |
+| [职业照转换](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/%E4%BA%BA%E7%89%A9%E8%82%96%E5%83%8F/01%20%E8%81%8C%E4%B8%9A%E7%85%A7%E8%BD%AC%E6%8D%A2.md) | 把成年人的参考照片转换为自然、可信的专业职业半身照，保留人物身份，不做过度磨皮或面部重塑。 |
+| [高级商业时尚肖像](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/%E4%BA%BA%E7%89%A9%E8%82%96%E5%83%8F/02%20%E6%97%B6%E5%B0%9A%E7%85%A7%E7%89%87.md) | 基于成年女性参考图生成简洁、高级、可控的商业时尚写真，重点保持人物身份、姿态逻辑和真实摄影质感。 |
+| [美术馆黑白纪实肖像](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/%E4%BA%BA%E7%89%A9%E8%82%96%E5%83%8F/03%20%E7%BE%8E%E6%9C%AF%E9%A6%86%E8%82%96%E5%83%8F.md) | 基于成年人物参考图，生成现代美术馆中的高反差黑白纪实肖像，利用静止主体与移动人群形成视觉对比。 |
+| [艺术黑白肖像组](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/%E4%BA%BA%E7%89%A9%E8%82%96%E5%83%8F/04%20%E8%89%BA%E6%9C%AF%E9%BB%91%E7%99%BD%E7%85%A7%E7%89%87.md) | 基于成年人物参考图生成 4 张身份一致、姿态不同的编辑类黑白肖像。 |
+| [复古时尚杂志封面肖像](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/%E4%BA%BA%E7%89%A9%E8%82%96%E5%83%8F/05%20%E6%9D%82%E5%BF%97%E5%B0%81%E9%9D%A2.md) | 基于成年女性参考图生成 3 张身份一致、姿态不同的复古时尚编辑照片，并预留杂志封面排版空间。 |
+| [几何光影电影肖像](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/%E4%BA%BA%E7%89%A9%E8%82%96%E5%83%8F/06%20%E7%94%B5%E5%BD%B1%E8%82%96%E5%83%8F.md) | 基于成年女性参考图生成暗色室内、几何彩光和高级编辑造型的电影感肖像。 |
+| [男士时尚九宫格肖像](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/%E4%BA%BA%E7%89%A9%E8%82%96%E5%83%8F/07%20%E6%B5%B7%E9%A9%AC%E4%BD%93%E4%B9%9D%E5%AE%AB%E6%A0%BC.md) | 基于成年男性参考图生成 3×3 时尚肖像拼贴，保持同一身份，同时展示不同表情、机位和有限度造型变化。 |
+| [双层侧脸背景肖像海报](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/%E4%BA%BA%E7%89%A9%E8%82%96%E5%83%8F/08%20%E5%90%8C%E4%B8%80%E5%BC%A0%E8%84%B8%E7%9A%84%E6%9F%94%E5%92%8C%E6%A8%A1%E7%B3%8A%E7%9A%84%E4%BE%A7%E9%9D%A2%E7%89%B9%E5%86%99.md) | 基于成年人物参考图，生成“前景全身人物 + 背景同一张脸的大幅柔焦侧脸”的双层编辑海报。 |
+| [雨夜霓虹电影人物照](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/%E4%BA%BA%E7%89%A9%E8%82%96%E5%83%8F/09%20%E4%BA%BA%E7%89%A9%E7%9A%84%E7%94%B5%E5%BD%B1%E7%BA%A7%E9%80%BC%E7%9C%9F%E5%9B%BE%E5%83%8F.md) | 基于成年人物参考图，生成雨后城市高架或街边座椅场景中的写实电影人物照。 |
+| [雪天校园多角度写真海报](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/%E4%BA%BA%E7%89%A9%E8%82%96%E5%83%8F/10%20%E5%A4%9A%E8%A7%92%E5%BA%A6%E7%89%B9%E5%86%99%E7%9A%84%E5%86%99%E7%9C%9F%E6%B5%B7%E6%8A%A5%E5%9B%BE.md) | 生成一组发生在大学校园操场的清新雪景情侣写真。主体必须明确为成年人，画面保持自然、克制和非性化。 |
+| [职业篮球看台转播抓拍](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/%E4%BA%BA%E7%89%A9%E8%82%96%E5%83%8F/11%20%E4%BD%93%E8%82%B2%E7%9C%8B%E5%8F%B0.md) | 基于成年人物参考图，生成职业篮球比赛看台上的真实体育电视转播抓拍画面，不使用真实电视台台标或伪造直播信息。 |
+| [人物发型分析与探索图卡](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/%E4%BA%BA%E7%89%A9%E8%82%96%E5%83%8F/12%20%E5%8F%91%E5%9E%8B.md) | 根据成年人物参考图生成身份一致、差异明确的发型方案对比图，适合日常造型、职业形象和角色设计探索。 |
+| [公司主题收藏级史诗叙事海报](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/%E4%BA%BA%E7%89%A9%E8%82%96%E5%83%8F/13%20%E5%85%AC%E5%8F%B8%E4%B8%BB%E9%A2%98%E6%94%B6%E8%97%8F%E7%BA%A7%E5%8F%B2%E8%AF%97%E5%8F%99%E4%BA%8B%E6%B5%B7%E6%8A%A5.md) | 根据上传的人物肖像，生成以人物巨大侧脸剪影为外轮廓、将公司世界观填充在剪影内部的收藏级电影海报。适合品牌叙事、企业愿景、创始人肖像或公司主题视觉概念图。 |
+| [物体主题收藏级史诗叙事海报](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/%E4%BA%BA%E7%89%A9%E8%82%96%E5%83%8F/14%20%E7%89%A9%E4%BD%93%E4%B8%BB%E9%A2%98%E6%94%B6%E8%97%8F%E7%BA%A7%E5%8F%B2%E8%AF%97%E5%8F%99%E4%BA%8B%E6%B5%B7%E6%8A%A5.md) | 生成以指定物体的巨大剪影作为外轮廓或背景、将公司世界观填充在剪影内部的收藏级史诗叙事海报。画面不使用真实人物肖像，适合品牌叙事、企业愿景和公司主题视觉概念图。 |
+| [古埃及双重曝光旅行海报](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/%E4%BA%BA%E7%89%A9%E8%82%96%E5%83%8F/%E5%8F%A4%E5%9F%83%E5%8F%8A%E6%97%85%E8%A1%8C%E6%B5%B7%E6%8A%A5.md) | 适用场景：生成 3:4 竖版、暖白留白、人物剪影嵌套古埃及黄昏景观的电影感旅行海报。 |
+| [东方意境海报](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/%E9%80%9A%E7%94%A8/%E4%B8%9C%E6%96%B9%E6%84%8F%E5%A2%83%E6%B5%B7%E6%8A%A5.md) | 适用场景：以大色域、微场景、纸本拼贴和水彩材质，生成现代东方编辑美学的文化活动海报。 |
+| [图像提示词设计](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90/%E9%80%9A%E7%94%A8/%E5%9B%BE%E5%83%8F%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%AE%BE%E8%AE%A1.md) | 把模糊的单张或独立图像想法转化为结构稳定、可迭代、可复用的生图指令。适用于写实摄影、电影剧照、UI 概念图、产品图、插画和信息图。 |
 
 <a id="skill"></a>
 
@@ -119,7 +121,7 @@
 | 名称 | 用途 |
 | --- | --- |
 | [代码审查与修复](%E6%8A%80%E8%83%BD/skills/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/software-development/code-review-fix/SKILL.md) | 当主要目标是审查已有代码、PR、提交或 diff，主动发现真实缺陷、安全、兼容性、并发、性能和可维护性风险，并在允许时直接修复和验证时使用。负责“先审再修”；普通明确功能实现应使用 codex-task-execution，不用于纯架构摸底。 |
-| [Codex 任务执行](%E6%8A%80%E8%83%BD/skills/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/software-development/codex-task-execution/SKILL.md) | 当用户已经有明确的软件开发、修改或修复目标，并希望当前 Codex 直接在现有仓库中读取代码、实施修改、运行测试/构建并交付结果时使用。负责真正完成代码变更；如果只是要生成一份可复制给其他 Codex 的任务书，使用 提示词/prompts/软件开发/software-development/codex-task-brief.md；主动代码审查使用 code-review-fix，Java 架构摸底使用 java-project-architecture-analysis。 |
+| [Codex 任务执行](%E6%8A%80%E8%83%BD/skills/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/software-development/codex-task-execution/SKILL.md) | 当用户已经有明确的软件开发、修改或修复目标，并希望当前 Codex 直接在现有仓库中读取代码、实施修改、运行测试/构建并交付结果时使用。负责真正完成代码变更；如果只是要生成一份可复制给其他 Codex 的任务书，使用 提示词/prompts/软件开发/软件开发/Codex任务书.md；主动代码审查使用 code-review-fix，Java 架构摸底使用 java-project-architecture-analysis。 |
 | [Java 项目架构分析](%E6%8A%80%E8%83%BD/skills/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/software-development/java-project-architecture-analysis/SKILL.md) | 当用户需要在接手、改造或排障前先理解现有 Java/Spring/Maven/Gradle 系统的启动入口、模块依赖、调用链、数据/事务/异步和部署结构时使用。负责证据驱动的架构摸底与风险定位；不直接承担功能实现，也不替代通用代码审查。 |
 
 ### 图像与视觉
@@ -127,7 +129,7 @@
 | 名称 | 用途 |
 | --- | --- |
 | [分层镜头叙事生成规范](%E6%8A%80%E8%83%BD/skills/%E5%9B%BE%E5%83%8F%E4%B8%8E%E8%A7%86%E8%A7%89/layered-shot-narrative/SKILL.md) | 当用户提供原始影视剧照或明确的场景参考图，并要求基于同一空间、人物和镜头连续生成 A/B/C（必要时 D/E）分层叙事图片和色彩控制卡时使用。该 Skill 直接生成连续图组并锁定跨帧一致性；普通单张图片提示词设计应使用 image-prompt-design。 |
-| [Panorama Generation](%E6%8A%80%E8%83%BD/skills/%E5%9B%BE%E5%83%8F%E4%B8%8E%E8%A7%86%E8%A7%89/panorama-generation/SKILL.md) | 当用户需要完成 360° 等距柱状全景内容，并希望把全景资产接入可运行的 Three.js/WebGL 查看器进行交互查看与验证时使用。负责“全景资产 → 查看器文件 → 映射/交互检查”的完整工作流；如果只需要一段普通单图生图提示词，使用 提示词/prompts/图像生成/image-generation/general/image-prompt-design.md。 |
+| [Panorama Generation](%E6%8A%80%E8%83%BD/skills/%E5%9B%BE%E5%83%8F%E4%B8%8E%E8%A7%86%E8%A7%89/panorama-generation/SKILL.md) | 当用户需要完成 360° 等距柱状全景内容，并希望把全景资产接入可运行的 Three.js/WebGL 查看器进行交互查看与验证时使用。负责“全景资产 → 查看器文件 → 映射/交互检查”的完整工作流；如果只需要一段普通单图生图提示词，使用 提示词/prompts/图像生成/图像生成/通用/图像提示词设计.md。 |
 | [style-reference-research](%E6%8A%80%E8%83%BD/skills/%E5%9B%BE%E5%83%8F%E4%B8%8E%E8%A7%86%E8%A7%89/style-reference-research/SKILL.md) | 当用户给出作者、作品、参考图或明确视觉风格主题，需要检索可靠来源、提取可观察风格特征，并转成可复用的色彩、构图、光线、材质、LUT 或生图约束时使用。负责“先研究风格再转译”；无外部风格研究需求的普通生图提示词用 image-prompt-design。 |
 
 ### 研究与复现
@@ -163,14 +165,7 @@
 
 <a id="示例"></a>
 
-## 示例（2）
-
-### 技术汇报
-
-| 名称 | 用途 |
-| --- | --- |
-| [ais-clickhouse-ppt-storyboard](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E6%8A%80%E6%9C%AF%E6%B1%87%E6%8A%A5/technical-communication/examples/ais-clickhouse-ppt-storyboard.md) | 文件名：ppt_storyboard_prompt.md |
-| [一、目标](%E6%8F%90%E7%A4%BA%E8%AF%8D/prompts/%E6%8A%80%E6%9C%AF%E6%B1%87%E6%8A%A5/technical-communication/examples/ais-clickhouse-video-storyboard.md) | 你是一个“技术方案视频分镜脚本导演 + 架构可视化设计师”。 |
+## 示例（0）
 
 <a id="历史稿"></a>
 

@@ -10,7 +10,7 @@
 
 | 目录 | 说明 |
 | --- | --- |
-| [`technical-communication/`](technical-communication/) | 技术方案 → PPT 页级脚本 / 视频分镜、旁白与 timing |
+| [`技术沟通/`](技术沟通/) | 技术方案 → PPT 页级脚本 / 视频分镜、旁白与 timing |
 
 ## 边界
 

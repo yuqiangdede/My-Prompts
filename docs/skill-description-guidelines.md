@@ -84,7 +84,7 @@ description: 当……时使用。负责……；不用于……，相邻任务�
 至少写出最容易混淆的相邻 Skill / Prompt：
 
 ```text
-如果只是生成一份给其他 Codex 的任务书，使用 提示词/prompts/软件开发/software-development/codex-task-brief.md；本 Skill 负责当前仓库的真实修改和验证。
+如果只是生成一份给其他 Codex 的任务书，使用 提示词/prompts/软件开发/软件开发/Codex任务书.md；本 Skill 负责当前仓库的真实修改和验证。
 ```
 
 ## 4. 推荐句式
@@ -134,7 +134,7 @@ requirement-review
 ### 软件开发
 
 ```text
-提示词/prompts/软件开发/software-development/codex-task-brief.md
+提示词/prompts/软件开发/软件开发/Codex任务书.md
   → 只生成给“另一个 Codex”的任务书
 
 java-project-architecture-analysis
@@ -163,10 +163,10 @@ python-vision-project-reproduction
 ### 图像与视频
 
 ```text
-提示词/prompts/图像生成/image-generation/general/image-prompt-design.md
+提示词/prompts/图像生成/图像生成/通用/图像提示词设计.md
   → 普通单张/独立图片提示词
 
-提示词/prompts/视频生成/video-generation/storyboard-design.md
+提示词/prompts/视频生成/视频生成/视频分镜设计.md
   → 一次性通用视频分镜
 
 layered-shot-narrative
@@ -179,10 +179,10 @@ panorama-generation
 ### 写作与汇报
 
 ```text
-提示词/prompts/内容写作/writing/structured-longform-writing.md
+提示词/prompts/内容写作/写作/结构化长文写作.md
   → 一次性长文
 
-提示词/prompts/技术汇报/technical-communication/
+提示词/prompts/技术汇报/技术沟通/
   → 已有技术方案转 PPT/视频分镜脚本
 ```
 

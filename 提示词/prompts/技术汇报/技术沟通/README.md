@@ -1,4 +1,4 @@
-# 技术汇报脚本（`technical-communication`）
+# 技术汇报脚本（`技术沟通`）
 
 用于把已经完成的技术方案一次性转换成汇报制作脚本，而不是直接生成最终 PPTX 或视频。
 
@@ -10,15 +10,15 @@
 
 | Prompt | 说明 |
 | --- | --- |
-| [`technical-to-ppt-storyboard.md`](technical-to-ppt-storyboard.md) | 技术方案 → PPT 分镜脚本 |
-| [`technical-to-video-storyboard.md`](technical-to-video-storyboard.md) | 技术方案 → 技术讲解视频分镜、旁白和 timing JSON |
+| [`技术方案转PPT分镜.md`](技术方案转PPT分镜.md) | 技术方案 → PPT 分镜脚本 |
+| [`技术方案转视频分镜.md`](技术方案转视频分镜.md) | 技术方案 → 技术讲解视频分镜、旁白和 timing JSON |
 
 ## 示例
 
-[`examples/`](examples/) 保留历史项目中已经使用过的专用模板，供参考但不作为通用默认规则：
+[`示例/`](示例/) 保留历史项目中已经使用过的专用模板，供参考但不作为通用默认规则：
 
-- [`ais-clickhouse-ppt-storyboard.md`](examples/ais-clickhouse-ppt-storyboard.md)
-- [`ais-clickhouse-video-storyboard.md`](examples/ais-clickhouse-video-storyboard.md)
+- [`AIS_ClickHouse_PPT分镜示例.md`](示例/AIS_ClickHouse_PPT分镜示例.md)
+- [`AIS_ClickHouse视频分镜示例.md`](示例/AIS_ClickHouse视频分镜示例.md)
 
 这些示例包含 AIS、轨迹回放、ClickHouse、缓存等项目专用要求。新项目优先使用通用 Prompt，再按需借鉴示例，不要把历史表名和模块名硬套到其他系统。
 

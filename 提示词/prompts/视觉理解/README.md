@@ -10,7 +10,7 @@
 
 | 目录 | 说明 |
 | --- | --- |
-| [`vision-multimodal-understanding/`](vision-multimodal-understanding/) | 图片对象、场景、属性等结构化视觉理解模板 |
+| [`视觉与多模态理解/`](视觉与多模态理解/) | 图片对象、场景、属性等结构化视觉理解模板 |
 
 ## 边界
 

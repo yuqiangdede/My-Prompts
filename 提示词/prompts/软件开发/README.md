@@ -10,7 +10,7 @@
 
 | 目录 | 说明 |
 | --- | --- |
-| [`software-development/`](software-development/) | 软件开发任务书，目前包含 Codex / 编码 Agent 任务说明模板 |
+| [`软件开发/`](软件开发/) | 软件开发任务书，目前包含 Codex / 编码 Agent 任务说明模板 |
 
 ## 边界
 

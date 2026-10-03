@@ -18,7 +18,7 @@
 
 ## 边界
 
-它不负责“生成一条给另一个 Codex 的提示词”。如果目标是先整理任务书，再复制给其他编码 Agent，使用 [`codex-task-brief.md`](../../../../../提示词/prompts/软件开发/software-development/codex-task-brief.md)。
+它不负责“生成一条给另一个 Codex 的提示词”。如果目标是先整理任务书，再复制给其他编码 Agent，使用 [`Codex任务书.md`](../../../../../提示词/prompts/软件开发/软件开发/Codex任务书.md)。
 
 ## 示例
 

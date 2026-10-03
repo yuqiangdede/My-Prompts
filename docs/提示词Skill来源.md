@@ -20,23 +20,23 @@
 提示词/
 └── prompts/
     ├── 产品与业务/
-    │   └── product-definition/
+    │   └── 产品定义/
     ├── 软件开发/
-    │   └── software-development/
+    │   └── 软件开发/
     ├── 内容写作/
-    │   └── writing/
+    │   └── 写作/
     ├── 技术汇报/
-    │   └── technical-communication/
+    │   └── 技术沟通/
     ├── 视频生成/
-    │   └── video-generation/
+    │   └── 视频生成/
     ├── 视觉理解/
-    │   └── vision-multimodal-understanding/
+    │   └── 视觉与多模态理解/
     ├── 安全合规/
-    │   └── safety-compliance-risk/
+    │   └── 安全合规与风险/
     ├── 地理空间/
-    │   └── geospatial-intelligence/
+    │   └── 地理空间智能/
     └── 图像生成/
-        └── image-generation/
+        └── 图像生成/
 
 技能/
 └── skills/
@@ -44,7 +44,7 @@
     │   ├── product-development-skills/
     │   └── product-development-pipeline/
     ├── 软件开发/
-    │   └── software-development/
+    │   └── 软件开发/
     ├── 研究与复现/
     │   └── research-analysis/
     ├── 图像与视觉/
@@ -87,7 +87,7 @@
 中文分类层只解决“人怎么快速看懂和归类”的问题，不改变机器标识：
 
 ```text
-提示词/prompts/图像生成/image-generation/
+提示词/prompts/图像生成/图像生成/
 技能/skills/图像与视觉/panorama-generation/
 智能体/agents/工作流编排/workflow-router/
 ```

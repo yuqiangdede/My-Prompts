@@ -23,14 +23,14 @@ scripts/
 ```text
 提示词/
 └── prompts/
-    ├── product-definition/
-    ├── software-development/
+    ├── 产品定义/
+    ├── 软件开发/
     └── ...
 
 技能/
 └── skills/
     ├── product-development-skills/
-    ├── software-development/
+    ├── 软件开发/
     └── ...
 
 智能体/

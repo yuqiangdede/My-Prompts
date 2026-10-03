@@ -10,7 +10,7 @@
 
 | Prompt | 说明 |
 | --- | --- |
-| [`codex-task-brief.md`](codex-task-brief.md) | 将开发需求整理成可复制给另一个 Codex / 编码 Agent 的完整任务书 |
+| [`Codex任务书.md`](Codex任务书.md) | 将开发需求整理成可复制给另一个 Codex / 编码 Agent 的完整任务书 |
 
 ## 边界
 

@@ -10,7 +10,7 @@
 
 | Prompt | 说明 |
 | --- | --- |
-| [`structured-longform-writing.md`](structured-longform-writing.md) | 已有主题/素材 → 提纲、完整长文、事实边界与修订检查 |
+| [`结构化长文写作.md`](结构化长文写作.md) | 已有主题/素材 → 提纲、完整长文、事实边界与修订检查 |
 
 ## 边界
 
