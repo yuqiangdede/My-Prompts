@@ -1,0 +1,4 @@
+interface:
+  display_name: "需求规格说明书生成"
+  short_description: "从源码和资料编制需求，经人工选择与校审交付 Markdown、HTML 或 Word"
+  default_prompt: "使用 $requirements-spec 生成正式需求规格说明书，让我选择可选参考文档、是否保留待确认部分，以及最终 Markdown、HTML 或 Word 格式。"
