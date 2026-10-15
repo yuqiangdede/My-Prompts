@@ -93,7 +93,7 @@
 
 <a id="skill"></a>
 
-## Skill（22）
+## Skill（29）
 
 ### 安全与质量
 
@@ -115,6 +115,18 @@
 | [Requirement Review](%E6%8A%80%E8%83%BD/skills/%E4%BA%A7%E5%93%81%E7%A0%94%E5%8F%91/product-development-skills/requirement-review/SKILL.md) | 当已有需求分析、产品方案、PRD、流程、原型或业务规则，需要在进入研发前做独立质量评审时使用。负责发现阻塞项、风险项、逻辑冲突、规则缺失、异常边界、权限和验收问题，并给出 S0-S3 与 GO/CONDITIONAL GO/NO-GO；不负责从零写 PRD。 |
 | [Solution Design](%E6%8A%80%E8%83%BD/skills/%E4%BA%A7%E5%93%81%E7%A0%94%E5%8F%91/product-development-skills/solution-design/SKILL.md) | 当需求分析已经完成，需要把问题、目标和约束转化为可确认的产品/业务方案时使用。负责候选方案、决策对比、模块边界、核心对象、主流程、状态、权限和页面能力框架；不写完整 PRD，不做具体技术架构实现。 |
 | [Version Retrospective](%E6%8A%80%E8%83%BD/skills/%E4%BA%A7%E5%93%81%E7%A0%94%E5%8F%91/product-development-skills/version-retrospective/SKILL.md) | 当产品版本已经开发、上线或完成阶段性交付，需要基于目标、过程、变更、测试、数据和反馈复盘结果与根因，并形成可执行改进动作时使用。重点是把经验固化为 Checklist/SOP/规则；禁止因一次偶发问题自动创建新 Skill。 |
+
+### 工作使用
+
+| 名称 | 用途 |
+| --- | --- |
+| [第三方接口文档生成](%E6%8A%80%E8%83%BD/skills/%E5%B7%A5%E4%BD%9C%E4%BD%BF%E7%94%A8/api-integration-docs/SKILL.md) | 从源码反推、项目需求与设计文档、其他参考文档生成可供第三方独立联调的接口技术文档，融合多来源并核对实现差异，覆盖 HTTP、消息及其他外部数据入口，交付 Markdown。用于接口文档编制、补全和整理，不用于实现或修改接口。 |
+| [组件文档融合](%E6%8A%80%E8%83%BD/skills/%E5%B7%A5%E4%BD%9C%E4%BD%BF%E7%94%A8/component-doc-merge/SKILL.md) | 将不同组件的需求文档或设计文档融合为产品层面的完整 Markdown 文档，统一业务能力、跨组件流程、术语、编号和图表；先收集输入、人工指定文档名称及模板或格式选择。适用于组件文档汇总交付，不用于简单拼接或重新扫描源码。 |
+| [数据库结构设计说明书编制](%E6%8A%80%E8%83%BD/skills/%E5%B7%A5%E4%BD%9C%E4%BD%BF%E7%94%A8/database-design-doc/SKILL.md) | 从项目 SQL 和辅助源码编制详尽的数据库结构设计说明书，默认以项目 _pkg/linux/bin/*db 下 SQL 为主要依据，覆盖字段、关系、分表分区、索引、视图及其他数据库对象，交付专业 Markdown 文档。用于数据库设计文档编制、数据字典和现有数据库结构还原。 |
+| [Markdown 转 Word 与合并交付](%E6%8A%80%E8%83%BD/skills/%E5%B7%A5%E4%BD%9C%E4%BD%BF%E7%94%A8/markdown-to-docx/SKILL.md) | 将已有 Markdown 转为 Word，或先按产品维度融合多个组件需求/设计 Markdown 再转为一份 Word。合并时人工指定名称并选择 Word 模板或推荐格式，支持图片、表格、公式、Mermaid 与数据图表；不重新提取源码需求。 |
+| [概要设计说明书编制](%E6%8A%80%E8%83%BD/skills/%E5%B7%A5%E4%BD%9C%E4%BD%BF%E7%94%A8/outline-design/SKILL.md) | 先收集并核对用户提供的源码路径（含项目沉淀文档）和参考文档，再开始工作。参考设计文档的格式、模块说明及流程写法，从源码反推或从需求推导模块与流程设计，将多个组件文档融合为一份专业概要设计说明书，展开接口、状态、数据及异常协作，使用 diagram-design 制图并仅交付 Markdown（.md）。不替代总体方案、详细代码设计或功能实现。 |
+| [总体设计说明书编制](%E6%8A%80%E8%83%BD/skills/%E5%B7%A5%E4%BD%9C%E4%BD%BF%E7%94%A8/overall-design/SKILL.md) | 先收集并核对用户提供的源码路径（含项目沉淀文档）和参考文档，再开始工作。参考设计文档的格式、模块说明及流程写法，从源码反推或从需求推导总体设计，并将多个组件文档融合为一份专业总体设计说明书，覆盖架构、子系统、关键流程、集成部署及质量策略，仅交付 Markdown（.md）。不替代模块概要设计、详细设计或代码实现。 |
+| [需求规格说明书生成](%E6%8A%80%E8%83%BD/skills/%E5%B7%A5%E4%BD%9C%E4%BD%BF%E7%94%A8/requirements-spec/SKILL.md) | 先收集并核对用户提供的源码路径（含项目沉淀文档）和参考文档，再开始工作。从项目文档、源码和参考需求分别生成中间需求文档，再融合为一份完整需求文档，支持指定输出位置和当前系统、目标交付或差异分析口径，经人工选择和校审交付 Markdown（.md）。也支持分层源码反推和已有规格书整理转换，不用于普通代码说明或软件实现。 |
 
 ### 软件开发
 
